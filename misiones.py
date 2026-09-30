@@ -41,22 +41,26 @@ if mision_selecionada_int == 6:
     print("╚════════════════════════════╝")
     
     print("El objetivo de este ejercicio es acertar la palabra en ingles mediante el ahorcado")
-    print("Para adivinar la palabra secreta tendrás 5 intentos. Cuando queden solo 2 intentos, aparecerá una pista")
+    print("Para adivinar la palabra secreta tendrás 5 intentos")
     
     intentos_int = 5
     lista_palabras_ingles_str = ["apple", "house", "water", "book", "school", "friend", "bread", "cheese"]
+    lista_palabras_castellano_str = ["manzana", "casa", "agua", "libro", "escuela", "amigo", "pan", "queso"]
     
     posicion_random_int = random.randint(0, len(lista_palabras_ingles_str) - 1 )
     palabra = lista_palabras_ingles_str[posicion_random_int]
+    palabra_castellano = lista_palabras_castellano_str[posicion_random_int]
 
     palabra_ahorcado_str = []
     for i in range(len(palabra)):
         palabra_ahorcado_str.append("_")
-        
+    
+    
     letras_int = len(palabra)
     letras_acertadas = 0
 
     while intentos_int > 0:
+        print("La palabra en español es: ", palabra_castellano)
         print(palabra_ahorcado_str)
         print("Introduzca una letra: ")
         letra_usuario_str = input().lower()
