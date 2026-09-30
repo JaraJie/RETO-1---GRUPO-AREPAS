@@ -69,5 +69,10 @@ while numero_seleccion_int != 0:
         continue
     elif numero_seleccion_int == 1:
         #Llamar a misiones.py (por hacer)
+        continue
+    elif numero_seleccion_int == 2:
+        #Llamar a usuario.py para ver el personaje (por hacer)
+        continue
+        
         
 input("FIN")

@@ -56,18 +56,18 @@ if mision_selecionada_int == 6:
     #Con el random.randint() creamos un numero aleatorio entre 0 y la longitud de la lista de palabras - 1
     #De esa forma, el programa elige una posicion al azar, la cual apunta a una palabra que guardamos en una variable tanto en español como en ingles
     posicion_random_int = random.randint(0, len(lista_palabras_ingles_str) - 1 )
-    palabra_str = lista_palabras_ingles_str[posicion_random_int]
+    palabra_ingles_str = lista_palabras_ingles_str[posicion_random_int]
     palabra_castellano_str = lista_palabras_castellano_str[posicion_random_int]
 
     #creamos una lista con la misma cantidad de _ que letras tiene la palabra a 
-    letras_int = len(palabra_str)
+    letras_palabra_int = len(palabra_ingles_str)
     palabra_ahorcado_str = []
-    for i in range(letras_int):
+    for i in range(letras_palabra_int):
         palabra_ahorcado_str.append("_")
     
     #creamos las ultimas variables guardando cuantas letras hemos acertado, y una lista con las letras que ya hemos mencionado (vacio por el momento)
-    letras_acertadas = 0
-    letras_usadas = []
+    letras_acertadas_int = 0
+    letras_usadas_str = []
 
     #Comienza el juego del Ahorcado
     #Mientras que se siga teniendo intentos, seguimos en el juego
@@ -75,7 +75,7 @@ if mision_selecionada_int == 6:
     while intentos_int > 0:
         
         #Printeamos la palabra a adivinar en español
-        print("La palabra en español es: ", palabra_castellano)
+        print("La palabra en español es: ", palabra_castellano_str)
 
         #Printeamos como va la palabra a adivinar, si se ha acertado alguna letra saldra en esa posicion, sino saldra _
         print(palabra_ahorcado_str)
@@ -88,7 +88,7 @@ if mision_selecionada_int == 6:
             
             #En el caso de que esa letra aparezca en la lista letras_usadas (es decir, ya se haya dicho esa letra), 
             #el programa nos imprime que ya hemos dicho esa letra y continua en el bucle
-            if letra_usuario_str in letras_usadas:
+            if letra_usuario_str in letras_usadas_str:
                 print("Ya has dicho esa letra")
             
             #En el caso contrario (la letra no se ha dicho antes), salimos del bucle while
@@ -98,15 +98,17 @@ if mision_selecionada_int == 6:
         #Ahora necesitamos comprobar si esa letra esta en la palabra.
         #Para ello, creamos un boolean para poder comprobar si la letra aparece o no
         aciertos_bool = False
+        
         #Por cada elemento de la lista, comprobamos si es la misma que ha introducido el usuario
-        for i in range(len(palabra)):
-            if palabra[i] == letra_usuario_str:
+        for i in range(letras_palabra_int):
+            
+            if palabra_ingles_str[i] == letra_usuario_str:
                 #En el caso de que la letra aparezca, esa posicion en nuestra lista de ahorcado, se reemplaza la _ por dicha letra en la posicion correcta
-                palabra_ahorcado_str[i] = palabra[i]
+                palabra_ahorcado_str[i] = palabra_ingles_str[i]
                 #Marcamos que se ha encontrado minimo una vez esa letra en la palabra
                 aciertos_bool = True
                 #Y a la vez se suma una por cada letra que haya en la palabra oculta
-                letras_acertadas += 1
+                letras_acertadas_int += 1
         
         #Si no se ha encontrado esa letra en la palabra, nos muestra por pantalla que no esta, y nos resta un intento. En el caso contrario no pasa nada
         if aciertos_bool == False:
@@ -114,22 +116,22 @@ if mision_selecionada_int == 6:
             intentos_int -= 1
         
         #En el caso de que se hayan acertado la misma cantidad de letras que hay en la palabra, salimos del While (del juego)
-        if letras_acertadas == letras_int:
+        if letras_acertadas_int == letras_palabra_int:
             break
             
         #Añadimos la letra usada a la lista de letras usadas
-        letras_usadas.append(letra_usuario_str)
+        letras_usadas_str.append(letra_usuario_str)
         #Volvemos al inicio del while
     
     #Fin del while principal (el juego del ahorcado como tal)
     
     #Si se ha salido del while, por haber acertado la palabra, nos enseña un mensaje de felicidades
-    if letras_acertadas == letras_int:
+    if letras_acertadas_int == letras_palabra_int:
         print("Felicidades, has acertado la palabra.")
     #En el caso contrario, se ha salido al quedarse sin intentos. Por lo que nos imprime un mensaje de que no se ha logrado acertar la palabra. Y nos enseña cual era la palabra
     else:
         print("No has logrado acertar la palabra.")
-        print("La palabra era: ", palabra)
+        print("La palabra era: ", palabra_ingles_str)
 
 #Input final para que no se cierre el programa
 input()
