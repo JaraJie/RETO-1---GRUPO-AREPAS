@@ -55,15 +55,20 @@ if mision_selecionada_int == 6:
     for i in range(len(palabra)):
         palabra_ahorcado_str.append("_")
     
-    
     letras_int = len(palabra)
     letras_acertadas = 0
+    letras_usadas = []
 
     while intentos_int > 0:
         print("La palabra en español es: ", palabra_castellano)
         print(palabra_ahorcado_str)
-        print("Introduzca una letra: ")
-        letra_usuario_str = input().lower()
+        while True:
+            print("Introduzca una letra: ")
+            letra_usuario_str = input().lower()
+            if letra_usuario_str in letras_usadas:
+                print("Ya has dicho esa letra")
+            else:
+                break
         aciertos_bool = False
         for i in range(len(palabra)):
             if palabra[i] == letra_usuario_str:
@@ -75,8 +80,9 @@ if mision_selecionada_int == 6:
             intentos_int -= 1
         if letras_acertadas == letras_int:
             break
+        letras_usadas.append(letra_usuario_str)
     if letras_acertadas == letras_int:
-        print("Felicidades, has acertado la palabra en.")
+        print("Felicidades, has acertado la palabra.")
     else:
         print("No has logrado acertar la palabra.")
         print("La palabra era: ", palabra)
