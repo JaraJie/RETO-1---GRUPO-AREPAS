@@ -36,5 +36,38 @@ if numero_seleccion_int == 1:
 else:
     #llama a la funcion de usuario.py y le ejecuta
     iniciar_sesion()
+
+
+
+#Tras iniciar sesion/crear cuenta, accedemos al menu principal de la app
+numero_seleccion_int = -1
+
+#El menu inicial se muestra hasta que el usuario inserte la opcion de Apagar la applicacion
+while numero_seleccion_int != 0:
     
-input()
+    #En el siguiente while, comprobamos que la opcion que elija el usuario sea valida
+    numero_no_valido_bool = True
+    while numero_no_valido_bool:
+        #Opciones que hay por el momento. Añadir más si tenemos tiempo
+        print("Elija una opción: ")
+        print("0) Apagar app")
+        print("1) Acceder a misiones ")
+        print("2) Ver personaje")
+    
+        numero_seleccion_int = int(input())
+        OPCION_MINIMA = 0
+        OPCION_MAXIMA = 2
+        #Comprobamos si la opcion es valida, si lo es cambia el booleano a false para poder salir del bucle
+        if numero_seleccion_int >= OPCION_MINIMA and numero_seleccion_int <= OPCION_MAXIMA:
+            numero_no_valido_bool = False
+        else:
+            print("Opcion no valida. Intentalo de nuevo")
+    
+    #Realizar la opcion elegida:
+    if numero_seleccion_int == 0:
+        print("Apagar aplicación seleccionado")
+        continue
+    elif numero_seleccion_int == 1:
+        #Llamar a misiones.py (por hacer)
+        
+input("FIN")
