@@ -115,7 +115,7 @@ def crear_cuenta():
     archivo_usuarios = open(ruta_usuarios, "a")
     
     # Escribimos los datos del nuevo usuario separados por comas y añadimos un salto de línea al final
-    archivo_usuarios.write(nombre_usuario_str + "," + correo_usuario_str + "," + contrasenia_usuario_str + "," + sombrero_usuario_str + "\n")
+    archivo_usuarios.write(nombre_usuario_str + "," + correo_usuario_str + "," + contrasenia_usuario_str + "," + monedas_usuario_int + "," + sombrero_usuario_str + "\n")
     
     # Cerramos el archivo una vez terminamos de escribir en él
     archivo_usuarios.close()
