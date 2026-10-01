@@ -68,8 +68,9 @@ def crear_cuenta():
 
     #Opciones de personalización
     print("¿Quieres añadirle algún sombrero a tu personaje? (si/no)")
-    anadir_sombrero_str = input()
+    anadir_sombrero_str = input().lower()
     anadir_sombrero_bool = anadir_sombrero_str == "si"
+    seleccion_sombrero_int = 0
 
     #Si el usuario elige personalizar añadiendo un sombrero, le aparece el menu para que escoja cual
     if anadir_sombrero_bool == True:
@@ -116,7 +117,7 @@ def crear_cuenta():
     archivo_usuarios = open(ruta_usuarios, "a")
     
     # Escribimos los datos del nuevo usuario separados por comas y añadimos un salto de línea al final
-    archivo_usuarios.write(nombre_usuario_str + "," + correo_usuario_str + "," + contrasenia_usuario_str + "," + monedas_usuario_int + "," + sombrero_usuario_str + "\n")
+    archivo_usuarios.write(nombre_usuario_str + "," + correo_usuario_str + "," + contrasenia_usuario_str + "," + str(monedas_usuario_int) + "," + sombrero_usuario_str + "\n")
     
     # Cerramos el archivo una vez terminamos de escribir en él
     archivo_usuarios.close()
