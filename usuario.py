@@ -80,7 +80,7 @@ def crear_cuenta():
             print("3) Orejas de gato")
             print("4) Antenas")
             print("0) Ninguno")
-            seleccion_sombrero_int = int(input)
+            seleccion_sombrero_int = int(input())
             if seleccion_sombrero_int >= 0 and seleccion_sombrero_int <= 4:
                 break
             print("Opcion no valida. Intentelo de nuevo")
