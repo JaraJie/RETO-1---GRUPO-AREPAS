@@ -549,19 +549,33 @@ def cargar_misiones(linea_usuario_int):
             print("★ ¡Hasta la próxima, aventurero! ★")
             break
 
+        #Añadir monedas a la base de datos del usuario en el txt
+        #Solo entra a modificar las monedas si se han conseguido monedas, sino, lo ignora
         if monedas_conseguidas_int > 0:
-            #AÑADIR MONEDAS AQUI#
+            #Buscamos y abrimos el txt
             ruta_carpeta = os.path.dirname(__file__)
             ruta_usuarios = os.path.join(ruta_carpeta, "usuarios.txt")
             #Abrimos el archivo txt con lectura y escritura a la vez (r+)
             archivo_usuarios = open(ruta_usuarios, "r+")
+            #Cargamos en lineas_archivo todas las lineas del txt
             lineas_archivo = archivo_usuarios.readlines()
+            #Separamos las lineas, en una lista
             lista_datos_usuario_str = lineas_archivo[linea_usuario_int].strip().split(",")
+            #Cogemos las linea que contiene la informacion del usuario actual y leemos su cantidad
+            #de monedas y le sumamos las conseguidas
             valor_nuevo_monedas_int = int(lista_datos_usuario_str[3]) + monedas_conseguidas_int
+            #Creamos una linea nueva, con las mismas variables que la anterior
+            #A excepcion de las monedas, que ponemos las calculadas en la variable de arriba
             linea_nueva_usuario_str = lista_datos_usuario_str[0] + "," + lista_datos_usuario_str[1] + "," + lista_datos_usuario_str[2] + "," + str(valor_nuevo_monedas_int) + "," + lista_datos_usuario_str[4] + "\n"
+            #Entramos a la lista de lineas, y en la posicion donde hemos hecho un cambio, le damos
+            #la nueva linea creada en la variable de arriba
             lineas_archivo[linea_usuario_int] = linea_nueva_usuario_str
+            #volvemos a poner el cursor del txt al inicio con seek(0)
             archivo_usuarios.seek(0)
+            #reescribimos todo el archivo. Todo se mantiene igual a excepcion de las monedas del
+            #usuario actual
             archivo_usuarios.writelines(lineas_archivo)
+            #cerramos el archivo
             archivo_usuarios.close()
         
         #Input final para que no se cierre el programa
