@@ -77,7 +77,8 @@ while numero_seleccion_int != 0:
         cargar_misiones()
     
     elif numero_seleccion_int == 2:
-        #Llamar a usuario.py para ver el personaje (por hacer)
+        # Llamamos a la función ver_personaje() de usuario.py, donde se encuentra el código 
+        #encargado de mostrar los datos del personaje.
         ver_personaje()
         continue
         
