@@ -69,6 +69,21 @@ def crear_cuenta():
     print("¿Quieres añadirle algún sombrero a tu personaje? (si/no)")
     anadir_sombrero_str = input()
     anadir_sombrero_bool = anadir_sombrero_str == "si"
+
+    if anadir_sombrero_bool == True:
+        while True:
+            print("Que opción de sombrero quieres para tu personaje: ")
+            print("1) Corona")
+            print("2) Sombrero de copa")
+            print("3) Orejas de gato")
+            print("4) Antenas")
+            print("0) Ninguno")
+            seleccion_sombrero_int = int(input)
+            if seleccion_sombrero_int >= 0 and seleccion_sombrero_int <= 4:
+                break
+            print("Opcion no valida. Intentelo de nuevo")
+    
+        
     
     #Una vez tenemos ya todos los datos validos, vamos a calcular en que linea se va a guardar el nuevo usuario
     #Para ello, volvemos a abrir usuarios.txt en modo lectura "r"
