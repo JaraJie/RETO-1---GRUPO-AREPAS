@@ -365,6 +365,21 @@ def cargar_misiones():
                 else:
                     print("✗ (╥﹏╥) ¡INCORRECTO! ★")
 
+                print()
+
+                print("╭────────── ✦ PREGUNTA 4 ✦ ──────────╮")
+                print("🧠 ¿Cómo se llama el proceso por el cual las plantas producen su propio alimento?")
+                print("   A) Respiración")
+                print("   B) Digestión")
+                print("   C) Fotosíntesis")
+                print("   D) Germinación")
+                respuesta4_str = input()
+                respuesta4_bool = respuesta4_str == 'c' or respuesta4_str == 'C'
+
+                if respuesta4_bool == 1:
+                    print("★ (^_^) ¡CORRECTO! +10 🪙 ★")
+                else:
+                    print("✗ (╥﹏╥) ¡INCORRECTO! ★")
 
                 
                 print()
