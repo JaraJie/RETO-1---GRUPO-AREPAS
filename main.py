@@ -72,7 +72,9 @@ while numero_seleccion_int != 0:
         continue
     
     elif numero_seleccion_int == 1:
-        #Llamar a misiones.py (por hacer)
+        #Usamos la función de cargar_misiones, para llamar a la funcion del mismo nombre en misiones.py
+        #la cual incluye todo el codigo sobre el menu de misiones y las propias misiones
+        #De esta forma, cada vez que queramos acceder al menu de misiones, llamamos a esta funcion
         cargar_misiones()
     
     elif numero_seleccion_int == 2:
