@@ -9,6 +9,9 @@ def cargar_misiones(linea_usuario_int):
     #Jara: variables para saber si el estado de la misión (completa o incompleta)#
     mision1_completada_bool = False
     mision2_completada_bool = False
+    mision3_completada_bool = False
+    mision4_completada_bool = False
+    mision5_completada_bool = False
     mision6_completada_bool = False
 
     while True: #Jara: bucle para que vuelva al menú de misiones#
@@ -64,7 +67,7 @@ def cargar_misiones(linea_usuario_int):
                 
                 print("╔════════════════════════════╗")
                 print("   ★ MISIÓN SELECCIONADA ★")
-                print("  [01] (๑•̀ㅂ•́)و FRUTI-QUEST")
+                print("     (๑•̀ㅂ•́)و FRUTI-QUEST")
                 print("╚════════════════════════════╝")
                 
                 print()
@@ -143,15 +146,15 @@ def cargar_misiones(linea_usuario_int):
                 print()
                 
                 #Jara: Breve explicación de en que consiste la misión para el usuario#
-                print('◆ Misión:')
-                print('   Resuelve 5 operaciones.')
-                print('◆ Puntuación:')
-                print('   ✓ Cada acierto = +1 punto')
-                print('   🪙 Cada punto = +10 oro')
-                print('◆ Máximo:')
-                print('   ★ 5 puntos = 50 🪙 oro')
+                print("◆ Misión:")
+                print("   Resuelve 5 operaciones.")
+                print("◆ Puntuación:")
+                print("   ✓ Cada acierto = +1 punto")
+                print("   🪙 Cada punto = +10 oro")
+                print("◆ Máximo:")
+                print("   ★ 5 puntos = 50 🪙 oro")
                 print()
-                print('⚠ ¡Cuidado! Tienes un número limitado de intentos.')
+                print("⚠ ¡Cuidado! Tienes un número limitado de intentos.")
                 
                 print()
                 
@@ -289,6 +292,144 @@ def cargar_misiones(linea_usuario_int):
                 print(">>> Pulsa una tecla para volver al menú de misiones <<<")
         #FIN MISIÓN 2#
 
+
+        ###############################################
+        #### NÚMERO DE MISIÓN: 4                   ####
+        #### NOMBRE DE MISIÓN: MAESTRO DEL SABER   ####
+        #### AUTOR: Mikel                          ####
+        ###############################################
+
+        elif mision_selecionada_int == 4:
+            
+            if mision4_completada_bool == False: #Jara: si la misión no esta completa para que puedas completarla#
+                
+                print()
+
+                print("╔════════════════════════════╗")
+                print("   ★ MISIÓN SELECCIONADA ★")
+                print("  (^_^)b MAESTRO DEL SABER")
+                print("╚════════════════════════════╝")
+
+                print()
+
+                #Jara: Breve explicación de en que consiste la misión para el usuario#
+                print("🧠 ¡PON A PRUEBA TU CONOCIMIENTO!")
+                print("◆ Misión:")
+                print("   Responder 5 preguntas.")
+                print("◆ Puntuación:")
+                print("   ✓ Cada acierto = +1 punto")
+                print("   🪙 Cada punto = +10 oro")
+                print("◆ Máximo:")
+                print("   ★ 5 puntos = 50 🪙 oro")
+                print("⚠️ Elige entre A, B, C o D.")
+                print("(ง •̀_•́)ง ¡QUE COMIENCE EL DESAFÍO!")
+
+                print()
+
+                print("╭────────── ✦ PREGUNTA 1 ✦ ──────────╮")
+                print("🧠 ¿Cuál es el planeta más cercano al Sol?")
+                print("   A) Venus")
+                print("   B) Mercurio")
+                print("   C) Marte")
+                print("   D) Júpiter")
+                respuesta1_str = input()
+                respuesta1_bool = respuesta1_str == 'b' or respuesta1_str == 'B'
+
+                if respuesta1_bool == 1:
+                    print("★ (^_^) ¡CORRECTO! +10 🪙 ★")
+                else:
+                    print("✗ (╥﹏╥) ¡INCORRECTO! ★")
+
+                print()
+
+                print("╭────────── ✦ PREGUNTA 2 ✦ ──────────╮")
+                print("🧠 ¿En qué año llegó Cristóbal Colón a América?")
+                print("   A) 1512")
+                print("   B) 1492")
+                print("   C) 1808")
+                print("   D) 1402")
+                respuesta2_str = input()
+                respuesta2_bool = respuesta2_str == 'b' or respuesta2_str == 'B'
+
+                if respuesta2_bool == 1:
+                    print("★ (^_^) ¡CORRECTO! +10 🪙 ★")
+                else:
+                    print("✗ (╥﹏╥) ¡INCORRECTO! ★")
+
+                print()
+
+                print("╭────────── ✦ PREGUNTA 3 ✦ ──────────╮")
+                print("🧠 ¿Cuál es la capital de España?")
+                print("   A) Barcelona")
+                print("   B) Sevilla")
+                print("   C) Madrid")
+                print("   D) Valencia")
+                respuesta3_str = input()
+                respuesta3_bool = respuesta3_str == 'c' or respuesta3_str == 'C'
+
+                if respuesta3_bool == 1:
+                    print("★ (^_^) ¡CORRECTO! +10 🪙 ★")
+                else:
+                    print("✗ (╥﹏╥) ¡INCORRECTO! ★")
+
+                print()
+
+                print("╭────────── ✦ PREGUNTA 4 ✦ ──────────╮")
+                print("🧠 ¿Cómo se llama el proceso por el cual las plantas producen su propio alimento?")
+                print("   A) Respiración")
+                print("   B) Digestión")
+                print("   C) Fotosíntesis")
+                print("   D) Germinación")
+                respuesta4_str = input()
+                respuesta4_bool = respuesta4_str == 'c' or respuesta4_str == 'C'
+
+                if respuesta4_bool == 1:
+                    print("★ (^_^) ¡CORRECTO! +10 🪙 ★")
+                else:
+                    print("✗ (╥﹏╥) ¡INCORRECTO! ★")
+
+                print()
+
+                print("╭────────── ✦ PREGUNTA 5 ✦ ──────────╮")
+                print("🧠 ¿Quién pintó la Mona Lisa o Gioconda?")
+                print("   A) Leonardo da Vinci")
+                print("   B) Vincent van Gogh")
+                print("   C) Karlos Arguiñano")
+                print("   D) Lamine Yamal")
+                respuesta5_str = input()
+                respuesta5_bool = respuesta5_str == 'a' or respuesta5_str == 'A'
+
+                if respuesta5_bool == 1:
+                    print("★ (^_^) ¡CORRECTO! +10 🪙 ★")
+                else:
+                    print("✗ (╥﹏╥) ¡INCORRECTO! ★")
+                
+                monedas_totales_int = (respuesta1_bool + respuesta2_bool + respuesta3_bool + respuesta4_bool + respuesta5_bool) * 10
+                
+                print()
+                
+                if monedas_totales_int == 0:
+                    print("╭──────────────────────────────╮")
+                    print("      (×_×) MISIÓN FALLIDA")
+                    print("╰──────────────────────────────╯")
+                    print("🪙 Oro conseguido en esta misión: ", monedas_totales_int)
+                    print("(^_^) ¡No te rindas!")
+                    print("¡La próxima misión te espera!")
+                    print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+                else:
+                    print("╭──────────────────────────────╮")
+                    print("     (ﾉ◕ヮ◕)ﾉ ¡ENHORABUENA!")
+                    print("╰──────────────────────────────╯")
+                    print("🪙 Oro conseguido: ", monedas_totales_int)
+                    print("¡La próxima misión te espera!")
+                    print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+
+                mision4_completada_bool = True
+            else: #Jara: si en el menu eliges el 4 y ya completaste la misión para que te salga que ya se completó#
+                print("╔══════════════════════════════╗")
+                print("    ★ MISIÓN YA COMPLETADA ★")
+                print("╚══════════════════════════════╝")
+                print(">>> Pulsa una tecla para volver al menú de misiones <<<")
 
         ###############################################
         #### NÚMERO DE MISIÓN: 6                   ####

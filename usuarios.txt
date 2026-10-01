@@ -1,2 +1,2 @@
 Prueba,prueba@gmail.com,1234,0,corona
-Maitane,m.esnaola04@gmail.com,1234,0,vacio
+Maitane,m.esnaola04@gmail.com,1234,50,vacio
