@@ -97,6 +97,7 @@ def crear_cuenta():
     else:
         sombrero_usuario_str = "antenas"
 
+    #Creamos la variable para guardar las monedas del usuario (empieza con 0 ya que es una nueva cuenta)
     monedas_usuario_int = 0
 
     #Una vez tenemos ya todos los datos validos, vamos a calcular en que linea se va a guardar el nuevo usuario
@@ -205,7 +206,7 @@ def ver_personaje(linea_usuario_int):
 
     print("Nombre: ", lista_datos_usuario_str[0])
     print("Clase: Caballero") #En esta demo, solo existe la clase caballero
-    print("Nivel: ") #por añadir: nivel a los datos
+    print("Monedas: ", lista_datos_usuario_str[3])
     print("          _________")
     print("         /         \\")
     print("        /           \\")
@@ -231,5 +232,4 @@ def ver_personaje(linea_usuario_int):
     print("          |      |")
     print("         /|      |\\")
     print("        /_|      |_\\")
-    input()
     input()
