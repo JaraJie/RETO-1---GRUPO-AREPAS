@@ -52,6 +52,8 @@ def cargar_misiones(linea_usuario_int):
             #print("╚════════════════════════════╝")#
 
 
+        #Reiniciamos por si acaso la variable para que en un inicio no tenga monedas nuevas de las misiones
+        monedas_conseguidas_int = 0
 
         ###############################################
         #### NÚMERO DE MISIÓN: 1                   ####
@@ -266,7 +268,7 @@ def cargar_misiones(linea_usuario_int):
                 
                 print() #Jara: en esta parte he sumado los puntos totales que el usuario ha ganado e hice una multiplicación porque 1 moneda equivale a 10 monedas#
                 monedas_totales_int = (respuesta1_bool + respuesta2_bool + respuesta3_bool + respuesta4_bool + respuesta5_bool) * 10
-                
+                monedas_conseguidas_int = monedas_totales_int
                 if monedas_totales_int == 0: #Jara: en caso de que consigas 0 monedas que salga el siguiente mensaje#
                     print("╭──────────────────────────────╮")
                     print("      (×_×) MISIÓN FALLIDA")
@@ -405,7 +407,7 @@ def cargar_misiones(linea_usuario_int):
                     print("✗ (╥﹏╥) ¡INCORRECTO! ★")
                 
                 monedas_totales_int = (respuesta1_bool + respuesta2_bool + respuesta3_bool + respuesta4_bool + respuesta5_bool) * 10
-                
+                monedas_conseguidas_int = monedas_totales_int
                 print()
                 
                 if monedas_totales_int == 0:
@@ -530,10 +532,13 @@ def cargar_misiones(linea_usuario_int):
                 #Si se ha salido del while, por haber acertado la palabra, nos enseña un mensaje de felicidades
                 if letras_acertadas_int == letras_palabra_int:
                     print("Felicidades, has acertado la palabra.")
+                    print("Has conseguido 50 monedas")
+                    monedas_conseguidas_int = 50
                 #En el caso contrario, se ha salido al quedarse sin intentos. Por lo que nos imprime un mensaje de que no se ha logrado acertar la palabra. Y nos enseña cual era la palabra
                 else:
                     print("No has logrado acertar la palabra.")
                     print("La palabra era: ", palabra_ingles_str)
+                    monedas_conseguidas_int = 0
                 
                 mision6_completada_bool = True
                 print(">>> Pulsa una tecla para volver al menú de misiones <<<")
