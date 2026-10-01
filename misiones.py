@@ -48,7 +48,7 @@ def cargar_misiones(linea_usuario_int):
         #if mision_selecionada_int == NÚMERO DE MISIÓN:#
             #print("╔════════════════════════════╗")#
             #print("   ★ MISIÓN SELECCIONADA ★")#
-            #print("     #NOMBRE DE LA MISIÓN#")#
+            #print("      #NOMBRE DE LA MISIÓN#")#
             #print("╚════════════════════════════╝")#
 
 
@@ -436,7 +436,7 @@ def cargar_misiones(linea_usuario_int):
         ###############################################
         #### NÚMERO DE MISIÓN: 6                   ####
         #### NOMBRE DE MISIÓN: ENGLISH QUEST       ####
-        #### AUTORA: Maitane                        ####
+        #### AUTORA: Maitane                       ####
         ###############################################
 
         elif mision_selecionada_int == 6:
