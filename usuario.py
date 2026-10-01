@@ -202,7 +202,7 @@ def ver_personaje(linea_usuario_int):
     archivo_usuarios.close()
 
     print("Nombre: ", lista_datos_usuario_str[0])
-    print("Clase: ") #En esta demo, solo existe la clase ...
+    print("Clase: Caballero") #En esta demo, solo existe la clase caballero
     print("Nivel: ") #por añadir: nivel a los datos
     print("          _________")
     print("         /         \\")
