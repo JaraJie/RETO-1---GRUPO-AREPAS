@@ -91,6 +91,8 @@ def crear_cuenta():
         sombrero_usuario_str = "sombrerocopa"
     elif seleccion_sombrero_int == 3:
         sombrero_usuario_str = "orejasgato"
+    else:
+        sombrero_usuario_str = "antenas"
 
     #Una vez tenemos ya todos los datos validos, vamos a calcular en que linea se va a guardar el nuevo usuario
     #Para ello, volvemos a abrir usuarios.txt en modo lectura "r"
