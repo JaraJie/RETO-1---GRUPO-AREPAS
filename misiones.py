@@ -349,6 +349,22 @@ def cargar_misiones():
                 else:
                     print("✗ (╥﹏╥) ¡INCORRECTO! ★")
 
+                print()
+
+                print("╭────────── ✦ PREGUNTA 3 ✦ ──────────╮")
+                print("🧠 ¿Cuál es la capital de España?")
+                print("   A) Barcelona")
+                print("   B) Sevilla")
+                print("   C) Madrid")
+                print("   D) Valencia")
+                respuesta3_str = input()
+                respuesta3_bool = respuesta3_str == 'c' or respuesta3_str == 'C'
+
+                if respuesta3_bool == 1:
+                    print("★ (^_^) ¡CORRECTO! +10 🪙 ★")
+                else:
+                    print("✗ (╥﹏╥) ¡INCORRECTO! ★")
+
 
                 
                 print()
