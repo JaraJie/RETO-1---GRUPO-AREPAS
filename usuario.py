@@ -193,17 +193,25 @@ def iniciar_sesion():
 #Función ver_personaje:
 def ver_personaje(linea_usuario_int):
 
+    #Para acceder a los datos, tenemos que entrar al txt como dicho anteriormente
     ruta_carpeta = os.path.dirname(__file__)
     ruta_usuarios = os.path.join(ruta_carpeta, "usuarios.txt")
+    #Abrimos el txt para leer (r)
     archivo_usuarios = open(ruta_usuarios, "r")
+    #Creamos una variable contador para saber en que linea tenemos que buscar los datos, comparandola
+    #con el numero de linea de inicio de sesion o la creacion de cuenta
     contador_int = 0
     for linea in archivo_usuarios:
+        #Si coincide con el numero de linea que teniamos antes, cogemos esos datos y los guardamos en una lista
         if contador_int == linea_usuario_int:
             lista_datos_usuario_str = linea.strip().split(",")
             break
+        #Aumentamos en 1 la variable para mirar si la siguiente linea es la correcta
         contador_int += 1
+    #Cerramos el archivo txt
     archivo_usuarios.close()
 
+    #Primera Version de imprimir por pantalla el usuario
     print("Nombre: ", lista_datos_usuario_str[0])
     print("Clase: Caballero") #En esta demo, solo existe la clase caballero
     print("Monedas: ", lista_datos_usuario_str[3])
@@ -232,4 +240,6 @@ def ver_personaje(linea_usuario_int):
     print("          |      |")
     print("         /|      |\\")
     print("        /_|      |_\\")
-    input()
+
+    #Input final para salir de la funcion cuando queramos
+    input("Pulse cualquier tecla para volver al menu principal")
