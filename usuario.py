@@ -241,5 +241,5 @@ def ver_personaje(linea_usuario_int):
     print("         /|      |\\")
     print("        /_|      |_\\")
 
-    #Input final para salir de la funcion cuando queramos
+    #Input final para salir de la funcion cuando
     input("Pulse cualquier tecla para volver al menu principal")
