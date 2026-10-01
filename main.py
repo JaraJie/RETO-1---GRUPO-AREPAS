@@ -82,4 +82,4 @@ while numero_seleccion_int != 0:
         ver_personaje(linea_usuario_int)
         continue
         
-input("Apagando Aplicaci´´on...")
+input("Apagando Aplicación...")
