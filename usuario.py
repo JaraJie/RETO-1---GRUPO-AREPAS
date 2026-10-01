@@ -87,7 +87,10 @@ def crear_cuenta():
         sombrero_usuario_str = "vacio"
     elif seleccion_sombrero_int == 1:
         sombrero_usuario_str = "corona"
-        
+    elif seleccion_sombrero_int == 2:
+        sombrero_usuario_str = "sombrerocopa"
+
+
     #Una vez tenemos ya todos los datos validos, vamos a calcular en que linea se va a guardar el nuevo usuario
     #Para ello, volvemos a abrir usuarios.txt en modo lectura "r"
     archivo_usuarios = open(ruta_usuarios, "r")
