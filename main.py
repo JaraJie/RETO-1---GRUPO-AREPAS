@@ -32,11 +32,11 @@ while True:
 #Primera Opcion: Crear una cuenta.
 if numero_seleccion_int == 1:
     #llama y ejecuta la funcion definida en usuario.py
-    numero_linea_usuarios_int = crear_cuenta()
+    linea_usuarios_int = crear_cuenta()
 #Segunda Opcion: Inicio de sesion
 else:
     #llama a la funcion de usuario.py y le ejecuta
-    numero_linea_usuarios_int = iniciar_sesion()
+    linea_usuarios_int = iniciar_sesion()
 
 
 
