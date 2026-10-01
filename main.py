@@ -12,6 +12,7 @@
 
 #comando para importar las funciones de crear_cuenta y iniciar_sesion de usuario.py
 from usuario import crear_cuenta, iniciar_sesion
+from misiones import cargar_misiones
 import subprocess, sys
 
 #Menu inicial donde Iniciaremos sesion o Crearemos una cuenta
@@ -72,10 +73,10 @@ while numero_seleccion_int != 0:
     
     elif numero_seleccion_int == 1:
         #Llamar a misiones.py (por hacer)
-        subprocess.run([sys.executable, "misiones.py"])
+        cargar_misiones()
     
     elif numero_seleccion_int == 2:
         #Llamar a usuario.py para ver el personaje (por hacer)
         continue
         
-input("FIN")
+input("Apagando Aplicaci´´on...")
