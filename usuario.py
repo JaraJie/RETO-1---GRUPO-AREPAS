@@ -82,8 +82,9 @@ def crear_cuenta():
             if seleccion_sombrero_int >= 0 and seleccion_sombrero_int <= 4:
                 break
             print("Opcion no valida. Intentelo de nuevo")
-    
-        
+
+    if anadir_sombrero_bool == False:
+        sombrero_usuario_str = "vacio"
     
     #Una vez tenemos ya todos los datos validos, vamos a calcular en que linea se va a guardar el nuevo usuario
     #Para ello, volvemos a abrir usuarios.txt en modo lectura "r"
