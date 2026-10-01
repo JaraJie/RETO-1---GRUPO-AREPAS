@@ -6,6 +6,7 @@ import random
 ###############################################
 
 #Jara: variables para saber si el estado de la misión (completa o incompleta)#
+mision1_completada_bool = False
 mision2_completada_bool = False
 mision6_completada_bool = False
 
@@ -37,6 +38,8 @@ while True: #Jara: bucle para que vuelva al menú de misiones#
             print("La misión que buscas no existe...")
             print("(^_^) Prueba con otro número.")
 
+
+#PLANTILLA MISIONES#
     #Jara: hice una plantilla para cuando selecciones la misión aparezca lo siguiente#
     #if mision_selecionada_int == NÚMERO DE MISIÓN:#
         #print("╔════════════════════════════╗")#
@@ -45,10 +48,48 @@ while True: #Jara: bucle para que vuelva al menú de misiones#
         #print("╚════════════════════════════╝")#
 
 
-    #BORRAR#
+
+    ###############################################
+    #### NÚMERO DE MISIÓN: 1                   ####
+    #### NOMBRE DE MISIÓN: FRUTI-QUEST         ####
+    #### AUTOR: Mikel                          ####
+    ###############################################
+
     if mision_selecionada_int == 1:
-        print("misión 1")
-    #BORRAR#
+        
+        if mision1_completada_bool == False:
+            print("╔════════════════════════════╗")
+            print("   ★ MISIÓN SELECCIONADA ★")
+            print("  [01] (๑•̀ㅂ•́)و FRUTI-QUEST")
+            print("╚════════════════════════════╝")
+            
+            print()
+            
+            print('Come 5 frutas al día para conseguir monedas hasta 50 monedas!')
+            frutas_int = int(input('¿Cuántas frutas has comido hoy?: '))
+            
+            #He usado los if, junto con las demás condiciones elif y else, para conectar cada cantidad de fruta con su premio de oro correspondiente
+            
+           
+            if frutas_int >= 5:
+                print('Has ganado 50 🪙')
+            elif frutas_int == 4:
+                print('Has ganado 40 🪙')
+            elif frutas_int == 3:
+                print('Has ganado 30 🪙')
+            elif frutas_int == 2:
+                print('Has ganado 20 🪙')
+            elif frutas_int == 1:
+                print('Has ganado 10 🪙')                         
+            else:
+                print('Has ganado 0 🪙')  #Este código utiliza la entrada de datos para recoger la cantidad, estructuras 
+            # condicionales para evaluar el valor y comandos de salida para mostrar la recompensa. 
+        else:
+            print("╔══════════════════════════════╗")
+            print("    ★ MISIÓN YA COMPLETADA ★")
+            print("╚══════════════════════════════╝")
+            print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+    #FIN MISIÓN 1#
 
 
     ###############################################
@@ -340,4 +381,3 @@ while True: #Jara: bucle para que vuelva al menú de misiones#
     
     #Input final para que no se cierre el programa
     input()
-
