@@ -11,7 +11,7 @@
 # abrirá otro archivo python, donde estará el codigo de dicha acción #
 
 #comando para importar las funciones de crear_cuenta y iniciar_sesion de usuario.py
-from usuario import crear_cuenta, iniciar_sesion
+from usuario import crear_cuenta, iniciar_sesion, ver_personaje
 from misiones import cargar_misiones
 import subprocess, sys
 
@@ -79,7 +79,7 @@ while numero_seleccion_int != 0:
     elif numero_seleccion_int == 2:
         # Llamamos a la función ver_personaje() de usuario.py, donde se encuentra el código 
         #encargado de mostrar los datos del personaje.
-        ver_personaje()
+        ver_personaje(linea_usuario_int)
         continue
         
 input("Apagando Aplicaci´´on...")
