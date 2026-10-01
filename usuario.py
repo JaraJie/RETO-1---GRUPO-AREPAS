@@ -97,6 +97,8 @@ def crear_cuenta():
     else:
         sombrero_usuario_str = "antenas"
 
+    monedas_usuario_int = 0
+
     #Una vez tenemos ya todos los datos validos, vamos a calcular en que linea se va a guardar el nuevo usuario
     #Para ello, volvemos a abrir usuarios.txt en modo lectura "r"
     archivo_usuarios = open(ruta_usuarios, "r")
