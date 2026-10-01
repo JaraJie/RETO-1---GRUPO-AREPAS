@@ -111,6 +111,7 @@ def iniciar_sesion():
         archivo_usuarios = open(ruta_usuarios, "r")
         existe_correo_bool = False
 
+        #Variable donde vamos a guardar la linea donde se encuentra el usuario en el txt
         linea_usuario_int = 0
         #En el for, miramos linea por linea en el archivo si el correo ya existe. Similar a como hemos hecho en crear cuenta
         for linea in archivo_usuarios:
@@ -119,6 +120,7 @@ def iniciar_sesion():
             if correo_usuario_str == correo_guardado_str:
                 existe_correo_bool = True
                 break
+            #Por cada linea en la que no se haya encontrado, se le suma uno para mirar la siguiente linea
             linea_usuario_int += 1
         
         #Cerramos el archivo de texto tras la lectura
@@ -148,6 +150,7 @@ def iniciar_sesion():
 
     #Hemos comprobado que el inicio de sesion ha sido correcto, por lo que ya hemos terminado la funcion iniciar sesion
     print("Iniciando sesion...")
+    #Devolvemos la linea donde esta el usuario que va a iniciar sesion
     return linea_usuario_int
     
 #Fin de la funcion inciar sesion
