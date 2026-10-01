@@ -18,6 +18,7 @@ def crear_cuenta():
     # De esta forma obtenemos automáticamente la carpeta del proyecto,
     # sin tener que escribir manualmente una ruta diferente para cada ordenador.
     ruta_carpeta = os.path.dirname(__file__)
+    
     # Unimos la ruta de la carpeta con "usuarios.txt" para obtener la ruta completa del archivo
     ruta_usuarios = os.path.join(ruta_carpeta, "usuarios.txt")
 
@@ -65,6 +66,17 @@ def crear_cuenta():
     print("Introduzca su contraseña nueva: ")
     contrasenia_usuario_str = input()
     
+    #Una vez tenemos ya todos los datos validos, vamos a calcular en que linea se va a guardar el nuevo usuario
+    #Para ello, volvemos a abrir usuarios.txt en modo lectura "r"
+    archivo_usuarios = open(ruta_usuarios, "r")
+    #Guardamos en una variable, la cantidad de lineas que hay en usuarios.txt
+    lineas_archivo_int = archivo_usuarios.readlines()
+    #Y como siempre que tratamos con archivos, cerramos al terminar
+    archivo_usuarios.close()
+    #Guardamos en una nueva variable, en que linea se va a escribir el nuevo usuario, para devolverla al main
+    #De esta forma, nos será más facil acceder a los datos del usuario.
+    linea_usuario_int = len(lineas_archivo_int)
+    
     #Una vez tenemos ya todos los datos, podemos escribir los datos en el archivo de texto
     #Abrimos usuarios.txt en modo añadir ("a") para agregar un nuevo usuario al final del fichero (sin borrar los anteriores)
     archivo_usuarios = open(ruta_usuarios, "a")
@@ -74,11 +86,14 @@ def crear_cuenta():
     
     # Cerramos el archivo una vez terminamos de escribir en él
     archivo_usuarios.close()
-    
+
     print("Usuario registrado correctamente")
+    #Devolvemos a main el dato de la linea donde se ha guardado usuario en el txt
+    return linea_usuario_int
 #Fin de la funcion crear usuario
     
  
+
 #Funcion Iniciar Sesion 
 def iniciar_sesion():
     
