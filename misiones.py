@@ -330,8 +330,7 @@ while True: #Jara: bucle para que vuelva al menú de misiones#
             print("╚══════════════════════════════╝")
             print(">>> Pulsa una tecla para volver al menú de misiones <<<")
     #FIN MISIÓN 6#
-
-
+    
     elif mision_selecionada_int == 0:
         print("(^-^) ¡Has salido del menú de misiones!")
         print("★ ¡Hasta la próxima, aventurero! ★")
