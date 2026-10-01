@@ -157,5 +157,16 @@ def iniciar_sesion():
 
 
 #Función ver_personaje:
-def ver_personaje():
-    print()
+def ver_personaje(linea_usuario_int):
+
+    ruta_carpeta = os.path.dirname(__file__)
+    ruta_usuarios = os.path.join(ruta_carpeta, "usuarios.txt")
+    archivo_usuarios = open(ruta_usuarios, "r")
+    contador_int = 0
+    for linea in archivo_usuarios:
+        if contador_int == linea_usuario_int:
+            lista_datos_usuario_str = linea.strip.split(",")
+            break
+        contador_int += 1
+    archivo_usuarios.close()
+    
