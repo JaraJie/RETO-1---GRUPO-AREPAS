@@ -110,7 +110,8 @@ def iniciar_sesion():
         #Abrimos el archivo de texto en modo lectura (r)
         archivo_usuarios = open(ruta_usuarios, "r")
         existe_correo_bool = False
-        
+
+        linea_usuario_int = 0
         #En el for, miramos linea por linea en el archivo si el correo ya existe. Similar a como hemos hecho en crear cuenta
         for linea in archivo_usuarios:
             lista_datos_usuarios_guardados_str = linea.strip().split(",")
@@ -118,6 +119,7 @@ def iniciar_sesion():
             if correo_usuario_str == correo_guardado_str:
                 existe_correo_bool = True
                 break
+            linea_usuario_int += 1
         
         #Cerramos el archivo de texto tras la lectura
         archivo_usuarios.close()
@@ -126,7 +128,6 @@ def iniciar_sesion():
         if existe_correo_bool == True:
             break
         #Si el correo no existe, volvemos al inicio del bucle while para pedir que introduzca un correo valido qu eya exista
-        
         print("No hay ninguna cuenta asociada a ese correo. Introduzca un correo registrado")
     
     #Tras tener el correo, comprobamos si la contraseña que nos dice el usuario es la correcta
@@ -147,5 +148,6 @@ def iniciar_sesion():
 
     #Hemos comprobado que el inicio de sesion ha sido correcto, por lo que ya hemos terminado la funcion iniciar sesion
     print("Iniciando sesion...")
+    return linea_usuario_int
     
 #Fin de la funcion inciar sesion
