@@ -165,8 +165,38 @@ def ver_personaje(linea_usuario_int):
     contador_int = 0
     for linea in archivo_usuarios:
         if contador_int == linea_usuario_int:
-            lista_datos_usuario_str = linea.strip.split(",")
+            lista_datos_usuario_str = linea.strip().split(",")
             break
         contador_int += 1
     archivo_usuarios.close()
-    
+
+    print("Nombre: ", lista_datos_usuario_str[0])
+    print("Clase: ") #En esta demo, solo existe la clase ...
+    print("Nivel: ") #por añadir: nivel a los datos
+    print("          _________")
+    print("         /         \\")
+    print("        /           \\")
+    print("       |             |")
+    print("       |    o   o    |")
+    print("       |             |")
+    print("       |      ^      |")
+    print("       |    \\___/    |")
+    print("        \\           /")
+    print("         \\_________/")
+    print("             ||")
+    print("          ___||___")
+    print("         /        \\")
+    print("        /          \\")
+    print("       |            |")
+    print("       |            |")
+    print("      /|            |\\")
+    print("     / |            | \\")
+    print("       |            |")
+    print("       |____________|")
+    print("          |      |")
+    print("          |      |")
+    print("          |      |")
+    print("         /|      |\\")
+    print("        /_|      |_\\")
+    input()
+    input()
