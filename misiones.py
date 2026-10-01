@@ -1,10 +1,11 @@
 import random
+import os
 
 ###############################################
 #### PANEL DE SELECCIÓN MISIONES           ####
 #### AUTOR: Jara                           ####
 ###############################################
-def cargar_misiones():
+def cargar_misiones(linea_usuario_int):
     #Jara: variables para saber si el estado de la misión (completa o incompleta)#
     mision1_completada_bool = False
     mision2_completada_bool = False
@@ -86,7 +87,7 @@ def cargar_misiones():
                     print("╚══════════════════════════════╝")
                     print("🍎 ¡Has alcanzado el objetivo!")
                     print("★ Recompensa obtenida: +50 🪙 ORO")
-                    monedas_conseguidas_int = 50
+                    monedas_conseguidas_int = 50 #Maitane: variable en la que se guardara las monedas obtenidas
                 elif frutas_int == 4:
                     print("★ ¡CASI LO CONSIGUES! ★")
                     print("🍎 Has comido 4 de 5 frutas.")
@@ -118,6 +119,7 @@ def cargar_misiones():
                 print("    ★ MISIÓN YA COMPLETADA ★")
                 print("╚══════════════════════════════╝")
                 print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+        
         #FIN MISIÓN 1#
 
 
@@ -406,7 +408,20 @@ def cargar_misiones():
             print("★ ¡Hasta la próxima, aventurero! ★")
             break
 
-        
+        if monedas_conseguidas_int > 0:
+            #AÑADIR MONEDAS AQUI#
+            ruta_carpeta = os.path.dirname(__file__)
+            ruta_usuarios = os.path.join(ruta_carpeta, "usuarios.txt")
+            #Abrimos el archivo txt con lectura y escritura a la vez (r+)
+            archivo_usuarios = open(ruta_usuarios, "r+")
+            lineas_archivo = archivo_usuarios.readlines()
+            lista_datos_usuario_str = lineas_archivo[linea_usuario_int].strip().split(",")
+            valor_nuevo_monedas_int = int(lista_datos_usuario_str[3]) + monedas_conseguidas_int
+            linea_nueva_usuario_str = lista_datos_usuario_str[0] + "," + lista_datos_usuario_str[1] + "," + lista_datos_usuario_str[2] + "," + str(valor_nuevo_monedas_int) + "," + lista_datos_usuario_str[4] + "\n"
+            lineas_archivo[linea_usuario_int] = linea_nueva_usuario_str
+            archivo_usuarios.seek(0)
+            archivo_usuarios.writelines(lineas_archivo)
+            archivo_usuarios.close()
         
         #Input final para que no se cierre el programa
         input()
