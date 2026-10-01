@@ -83,7 +83,7 @@ def crear_cuenta():
                 break
             print("Opcion no valida. Intentelo de nuevo")
 
-    if anadir_sombrero_bool == False:
+    if anadir_sombrero_bool == False or seleccion_sombrero_int == 0:
         sombrero_usuario_str = "vacio"
     
     #Una vez tenemos ya todos los datos validos, vamos a calcular en que linea se va a guardar el nuevo usuario
