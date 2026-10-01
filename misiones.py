@@ -381,8 +381,41 @@ def cargar_misiones():
                 else:
                     print("✗ (╥﹏╥) ¡INCORRECTO! ★")
 
+                print()
+
+                print("╭────────── ✦ PREGUNTA 5 ✦ ──────────╮")
+                print("🧠 ¿Quién pintó la Mona Lisa o Gioconda?")
+                print("   A) Leonardo da Vinci")
+                print("   B) Vincent van Gogh")
+                print("   C) Karlos Arguiñano")
+                print("   D) Lamine Yamal")
+                respuesta5_str = input()
+                respuesta5_bool = respuesta5_str == 'a' or respuesta5_str == 'A'
+
+                if respuesta5_bool == 1:
+                    print("★ (^_^) ¡CORRECTO! +10 🪙 ★")
+                else:
+                    print("✗ (╥﹏╥) ¡INCORRECTO! ★")
+                
+                monedas_totales_int = (respuesta1_bool + respuesta2_bool + respuesta3_bool + respuesta4_bool + respuesta5_bool) * 10
                 
                 print()
+                
+                if monedas_totales_int == 0:
+                    print("╭──────────────────────────────╮")
+                    print("      (×_×) MISIÓN FALLIDA")
+                    print("╰──────────────────────────────╯")
+                    print("🪙 Oro conseguido en esta misión: ", monedas_totales_int)
+                    print("(^_^) ¡No te rindas!")
+                    print("¡La próxima misión te espera!")
+                    print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+                else:
+                    print("╭──────────────────────────────╮")
+                    print("     (ﾉ◕ヮ◕)ﾉ ¡ENHORABUENA!")
+                    print("╰──────────────────────────────╯")
+                    print("🪙 Oro conseguido: ", monedas_totales_int)
+                    print("¡La próxima misión te espera!")
+                    print(">>> Pulsa una tecla para volver al menú de misiones <<<")
 
                 mision4_completada_bool = True
             else: #Jara: si en el menu eliges el 4 y ya completaste la misión para que te salga que ya se completó#
