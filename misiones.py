@@ -8,6 +8,9 @@ def cargar_misiones():
     #Jara: variables para saber si el estado de la misión (completa o incompleta)#
     mision1_completada_bool = False
     mision2_completada_bool = False
+    mision3_completada_bool = False
+    mision4_completada_bool = False
+    mision5_completada_bool = False
     mision6_completada_bool = False
 
     while True: #Jara: bucle para que vuelva al menú de misiones#
@@ -63,7 +66,7 @@ def cargar_misiones():
                 
                 print("╔════════════════════════════╗")
                 print("   ★ MISIÓN SELECCIONADA ★")
-                print("  [01] (๑•̀ㅂ•́)و FRUTI-QUEST")
+                print("     (๑•̀ㅂ•́)و FRUTI-QUEST")
                 print("╚════════════════════════════╝")
                 
                 print()
@@ -136,15 +139,15 @@ def cargar_misiones():
                 print()
                 
                 #Jara: Breve explicación de en que consiste la misión para el usuario#
-                print('◆ Misión:')
-                print('   Resuelve 5 operaciones.')
-                print('◆ Puntuación:')
-                print('   ✓ Cada acierto = +1 punto')
-                print('   🪙 Cada punto = +10 oro')
-                print('◆ Máximo:')
-                print('   ★ 5 puntos = 50 🪙 oro')
+                print("◆ Misión:")
+                print("   Resuelve 5 operaciones.")
+                print("◆ Puntuación:")
+                print("   ✓ Cada acierto = +1 punto")
+                print("   🪙 Cada punto = +10 oro")
+                print("◆ Máximo:")
+                print("   ★ 5 puntos = 50 🪙 oro")
                 print()
-                print('⚠ ¡Cuidado! Tienes un número limitado de intentos.')
+                print("⚠ ¡Cuidado! Tienes un número limitado de intentos.")
                 
                 print()
                 
@@ -282,6 +285,64 @@ def cargar_misiones():
                 print(">>> Pulsa una tecla para volver al menú de misiones <<<")
         #FIN MISIÓN 2#
 
+
+        ###############################################
+        #### NÚMERO DE MISIÓN: 4                   ####
+        #### NOMBRE DE MISIÓN: MAESTRO DEL SABER   ####
+        #### AUTOR: Mikel                          ####
+        ###############################################
+
+        elif mision_selecionada_int == 4:
+            
+            if mision4_completada_bool == False: #Jara: si la misión no esta completa para que puedas completarla#
+                
+                print()
+
+                print("╔════════════════════════════╗")
+                print("   ★ MISIÓN SELECCIONADA ★")
+                print("  (^_^)b MAESTRO DEL SABER")
+                print("╚════════════════════════════╝")
+
+                print()
+
+                #Jara: Breve explicación de en que consiste la misión para el usuario#
+                print("🧠 ¡PON A PRUEBA TU CONOCIMIENTO!")
+                print("◆ Misión:")
+                print("   Responder 5 preguntas.")
+                print("◆ Puntuación:")
+                print("   ✓ Cada acierto = +1 punto")
+                print("   🪙 Cada punto = +10 oro")
+                print("◆ Máximo:")
+                print("   ★ 5 puntos = 50 🪙 oro")
+                print("⚠️ Elige entre A, B, C o D.")
+                print("(ง •̀_•́)ง ¡QUE COMIENCE EL DESAFÍO!")
+
+                print()
+
+                print("╭────────── ✦ PREGUNTA 1 ✦ ──────────╮")
+                print("🧠 ¿Cuál es el planeta más cercano al Sol?")
+                print("   A) Venus")
+                print("   B) Mercurio")
+                print("   C) Marte")
+                print("   D) Júpiter")
+                respuesta1_str = input()
+                respuesta1_bool = respuesta1_str == 'b' or respuesta1_str == 'B'
+
+                if respuesta1_bool == 1:
+                    print("★ (^_^) ¡CORRECTO! +10 🪙 ★")
+                else:
+                    print("✗ (╥﹏╥) ¡INCORRECTO! ★")
+
+
+                
+                print()
+
+                mision4_completada_bool = True
+            else: #Jara: si en el menu eliges el 4 y ya completaste la misión para que te salga que ya se completó#
+                print("╔══════════════════════════════╗")
+                print("    ★ MISIÓN YA COMPLETADA ★")
+                print("╚══════════════════════════════╝")
+                print(">>> Pulsa una tecla para volver al menú de misiones <<<")
 
         ###############################################
         #### NÚMERO DE MISIÓN: 6                   ####
