@@ -74,7 +74,7 @@ while numero_seleccion_int != 0:
         #Usamos la función de cargar_misiones, para llamar a la funcion del mismo nombre en misiones.py
         #la cual incluye todo el codigo sobre el menu de misiones y las propias misiones
         #De esta forma, cada vez que queramos acceder al menu de misiones, llamamos a esta funcion
-        cargar_misiones()
+        cargar_misiones(linea_usuario_int)
     
     elif numero_seleccion_int == 2:
         # Llamamos a la función ver_personaje() de usuario.py, donde se encuentra el código 
