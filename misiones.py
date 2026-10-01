@@ -40,6 +40,8 @@ if mision_selecionada_int == 1:
     
     print('Come 5 frutas al día para conseguir monedas hasta 50 monedas!')
     frutas_int = int(input('¿Cuántas frutas has comido hoy?: '))
+    
+    #He usado los if, junto con las demás condiciones elif y else, para conectar cada cantidad de fruta con su premio de oro correspondiente
 
 if frutas_int >= 5:
     print('Has ganado 50 oro')
@@ -50,6 +52,8 @@ elif frutas_int == 3:
 elif frutas_int == 2:
     print('Has ganado 20 oro')
 elif frutas_int == 1:
-    print('Has ganado 10 oro')
+    print('Has ganado 10 oro')                         
 else:
-    print('Has ganado 0 oro')
+    print('Has ganado 0 oro')  #Este código utiliza la entrada de datos para recoger la cantidad, estructuras 
+# condicionales para evaluar el valor y comandos de salida para mostrar la recompensa.
+                                
