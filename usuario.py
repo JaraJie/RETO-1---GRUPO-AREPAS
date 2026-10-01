@@ -154,3 +154,8 @@ def iniciar_sesion():
     return linea_usuario_int
     
 #Fin de la funcion inciar sesion
+
+
+#Función ver_personaje:
+def ver_personaje():
+    print()
