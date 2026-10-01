@@ -38,7 +38,6 @@ if numero_seleccion_int == 1:
 else:
     #llama a la funcion de usuario.py y le ejecuta
     linea_usuario_int = iniciar_sesion()
-    print(linea_usuario_int)
 
 
 
@@ -79,6 +78,7 @@ while numero_seleccion_int != 0:
     
     elif numero_seleccion_int == 2:
         #Llamar a usuario.py para ver el personaje (por hacer)
+        
         continue
         
 input("Apagando Aplicaci´´on...")
