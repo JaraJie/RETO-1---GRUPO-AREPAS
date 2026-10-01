@@ -69,12 +69,13 @@ while numero_seleccion_int != 0:
     if numero_seleccion_int == 0:
         print("Apagar aplicación seleccionado")
         continue
+    
     elif numero_seleccion_int == 1:
         #Llamar a misiones.py (por hacer)
         subprocess.run([sys.executable, "misiones.py"])
+    
     elif numero_seleccion_int == 2:
         #Llamar a usuario.py para ver el personaje (por hacer)
         continue
-        
         
 input("FIN")
