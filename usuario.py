@@ -65,6 +65,10 @@ def crear_cuenta():
     #continuamos pidiendole al usuario que introduzca la contraseña nueva que va a crear en su cuenta
     print("Introduzca su contraseña nueva: ")
     contrasenia_usuario_str = input()
+
+    print("¿Quieres añadirle algún sombrero a tu personaje? (si/no)")
+    anadir_sombrero_str = input()
+    anadir_sombrero_bool = anadir_sombrero_str == "si"
     
     #Una vez tenemos ya todos los datos validos, vamos a calcular en que linea se va a guardar el nuevo usuario
     #Para ello, volvemos a abrir usuarios.txt en modo lectura "r"
