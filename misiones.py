@@ -86,22 +86,27 @@ def cargar_misiones():
                     print("╚══════════════════════════════╝")
                     print("🍎 ¡Has alcanzado el objetivo!")
                     print("★ Recompensa obtenida: +50 🪙 ORO")
+                    monedas_conseguidas_int = 50
                 elif frutas_int == 4:
                     print("★ ¡CASI LO CONSIGUES! ★")
                     print("🍎 Has comido 4 de 5 frutas.")
                     print("🪙 Recompensa: +40 ORO")
+                    monedas_conseguidas_int = 40
                 elif frutas_int == 3:
                     print("(^_^) ¡BUEN TRABAJO!")
                     print("🍎 Has comido 3 de 5 frutas.")
                     print("🪙 Recompensa: +30 ORO")
+                    monedas_conseguidas_int = 30
                 elif frutas_int == 2:
                     print("(•̀ᴗ•́)و ¡VAS POR BUEN CAMINO!")
                     print("🍎 Has comido 2 de 5 frutas.")
                     print("🪙 Recompensa: +20 ORO")
+                    monedas_conseguidas_int = 20
                 elif frutas_int == 1:
                     print("(^_^) ¡TODO SUMA!")
                     print("🍎 Has comido 1 de 5 frutas.")
                     print("🪙 Recompensa: +10 ORO")
+                    monedas_conseguidas_int = 10
                 else:
                     print("(╥﹏╥) ¡OH, NO!")
                     print("🍎 No has comido ninguna fruta.")
