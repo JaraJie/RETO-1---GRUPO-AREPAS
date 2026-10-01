@@ -12,6 +12,7 @@
 
 #comando para importar las funciones de crear_cuenta y iniciar_sesion de usuario.py
 from usuario import crear_cuenta, iniciar_sesion
+import subprocess, sys
 
 #Menu inicial donde Iniciaremos sesion o Crearemos una cuenta
 print("Bienvenido a Skillia")
@@ -31,11 +32,11 @@ while True:
 #Primera Opcion: Crear una cuenta.
 if numero_seleccion_int == 1:
     #llama y ejecuta la funcion definida en usuario.py
-    crear_cuenta()
+    numero_linea_usuarios_int = crear_cuenta()
 #Segunda Opcion: Inicio de sesion
 else:
     #llama a la funcion de usuario.py y le ejecuta
-    iniciar_sesion()
+    numero_linea_usuarios_int = iniciar_sesion()
 
 
 
@@ -69,7 +70,7 @@ while numero_seleccion_int != 0:
         continue
     elif numero_seleccion_int == 1:
         #Llamar a misiones.py (por hacer)
-        continue
+        subprocess.run([sys.executable, "misiones.py"])
     elif numero_seleccion_int == 2:
         #Llamar a usuario.py para ver el personaje (por hacer)
         continue
