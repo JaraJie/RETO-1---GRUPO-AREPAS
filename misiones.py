@@ -333,6 +333,22 @@ def cargar_misiones():
                 else:
                     print("✗ (╥﹏╥) ¡INCORRECTO! ★")
 
+                print()
+
+                print("╭────────── ✦ PREGUNTA 2 ✦ ──────────╮")
+                print("🧠 ¿En qué año llegó Cristóbal Colón a América?")
+                print("   A) 1512")
+                print("   B) 1492")
+                print("   C) 1808")
+                print("   D) 1402")
+                respuesta2_str = input()
+                respuesta2_bool = respuesta2_str == 'b' or respuesta2_str == 'B'
+
+                if respuesta2_bool == 1:
+                    print("★ (^_^) ¡CORRECTO! +10 🪙 ★")
+                else:
+                    print("✗ (╥﹏╥) ¡INCORRECTO! ★")
+
 
                 
                 print()
