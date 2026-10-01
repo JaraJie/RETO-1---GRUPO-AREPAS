@@ -78,7 +78,7 @@ while numero_seleccion_int != 0:
     
     elif numero_seleccion_int == 2:
         #Llamar a usuario.py para ver el personaje (por hacer)
-        
+        ver_personaje()
         continue
         
 input("Apagando Aplicaci´´on...")
