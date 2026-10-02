@@ -578,7 +578,7 @@ def cargar_misiones(linea_usuario_int):
                 
                 #explicación objetivo de la misión y recomensas#
                 print("◆ Misión:")
-                print("   Acierta el número secreto (entre 1-20).")
+                print("   Acierta el número secreto (entre 1-30).")
                 print("◆ Recompensa:")
                 print("   ★ Si aciertas → +100 🪙 oro")
                 print()
@@ -586,7 +586,7 @@ def cargar_misiones(linea_usuario_int):
                 print()
                 print("⚠ ¡Cuidado! Tienes 5 intentos.")
 
-                numero_secreto_int = random.randint(1, 21) #Jara: para que el el número secreto sea un número aleatorio entre el 1 y 20 (20 incluido)#
+                numero_secreto_int = random.randint(1, 31) #Jara: para que el el número secreto sea un número aleatorio entre el 1 y 20 (20 incluido)#
 
                 contador_int = 0
                 
