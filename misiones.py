@@ -607,12 +607,14 @@ def cargar_misiones(linea_usuario_int):
                         if contador_int == 5: #Jara: en caso de no acertar el número secreto y haber usado los 5 intentos que aparezca el siguiente mensaje#
                             print("(×_×) ¡OH, NO! No has conseguido 🪙 monedas en este ejercicio.")
                             print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+                            monedas_conseguidas_int = 0
                             break #Jara: como no has acertado y ya usaste todos los intentos para que salga del bucle#
                     else: #Jara: en caso de acertar el número secreto aparezca lo siguiente#
                         print("★ (^_^) ¡CORRECTO! ★")
                         print("🎉 ¡Has descubierto el número secreto!")
                         print("🪙 +100 oro")
-                        print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+                        input(">>> Pulsa una tecla para volver al menú de misiones <<<")
+                        monedas_conseguidas_int = 100
                         break #Jara: como acertaste el número para que salga del bucle#
                     mision7_completada_bool = True #Jara: como ya completaste la misión el valor se volvera cierto#
                 
@@ -620,7 +622,7 @@ def cargar_misiones(linea_usuario_int):
                 print("╔══════════════════════════════╗")
                 print("    ★ MISIÓN YA COMPLETADA ★")
                 print("╚══════════════════════════════╝")
-                print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+                input(">>> Pulsa una tecla para volver al menú de misiones <<<")
             #FIN MISIÓN ESPECIAL#
 
 
@@ -659,8 +661,7 @@ def cargar_misiones(linea_usuario_int):
             archivo_usuarios.writelines(lineas_archivo)
             #cerramos el archivo
             archivo_usuarios.close()
-        
-        os.system("cls")
+
 
         #Input final para que no se cierre el programa
         input()
