@@ -555,6 +555,53 @@ def cargar_misiones(linea_usuario_int):
                 print(">>> Pulsa una tecla para volver al menú de misiones <<<")
         #FIN MISIÓN 6#
         
+
+        ###############################################
+        #### NÚMERO DE MISIÓN: 7                   ####
+        #### NOMBRE DE MISIÓN: MISIÓN ESPECIAL     ####
+        #### AUTOR: Jara                           ####
+        ###############################################
+
+        elif mision_selecionada_int == 7:
+
+            if mision7_completada_bool == False: #Jara: en caso de no tener la misión completa para poder hacerla#
+                
+                print()
+
+                print("★━━━━━━━━━━━━━━━━━━━━━━━━━━━━★")
+                print("   ☆ SPECIAL QUEST ☆")
+                print("   (¬‿¬) NÚMERO MISTERIOSO")
+                print("★━━━━━━━━━━━━━━━━━━━━━━━━━━━━★")
+
+                print()
+                
+                #explicación objetivo de la misión y recomensas#
+                print("◆ Misión:")
+                print("   Acierta el número secreto.")
+                print("◆ Recompensa:")
+                print("   ★ Si aciertas → +100 🪙 oro")
+                print()
+                print("(¬‿¬) ¿Serás capaz de descubrirlo?")
+                print()
+                print("⚠ ¡Cuidado! Tienes 5 intentos.")
+
+                numero_secreto_int = random.randint(1, 21)
+
+                contador_int = 0
+                
+                print()
+                print("🔮 Escribe el número secreto: ")
+
+
+                
+            else: #Jara: si en el menu eliges el 7 y ya completaste la misión para que te salga que ya se completó#
+                print("╔══════════════════════════════╗")
+                print("    ★ MISIÓN YA COMPLETADA ★")
+                print("╚══════════════════════════════╝")
+                print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+            #FIN MISIÓN ESPECIAL#
+
+
         elif mision_selecionada_int == 0:
             print("(^-^) ¡Has salido del menú de misiones!")
             print("★ ¡Hasta la próxima, aventurero! ★")
