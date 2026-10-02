@@ -1,5 +1,5 @@
 Prueba,prueba@gmail.com,1234,0,corona
-Maitane,m.esnaola04@gmail.com,1234,50,vacio
+Maitane,m.esnaola04@gmail.com,1234,80,vacio
 0,0,0,0,vacio
 1,1,1,90,corona
 2,2,2,0,sombrerocopa
