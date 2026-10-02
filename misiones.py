@@ -592,7 +592,28 @@ def cargar_misiones(linea_usuario_int):
                 print()
                 print("🔮 Escribe el número secreto: ")
 
+                while contador_int < 5:
+                    numero_int = int(input())
+                    contador_int = contador_int + 1
 
+                    if numero_int != numero_secreto_int:
+                        if numero_int < numero_secreto_int:
+                            print("✗ (╥﹏╥) ¡INCORRECTO! ★")
+                            print("⬆️ ¡El número secreto es MAYOR!")
+                        else:
+                            print("✗ (╥﹏╥) ¡INCORRECTO! ★")
+                            print("⬇️ ¡El número secreto es MENOR!")
+                        if contador_int == 5:
+                            print("(×_×) ¡OH, NO! No has conseguido 🪙 monedas en este ejercicio.")
+                            print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+                            break
+                    else:
+                        print("★ (^_^) ¡CORRECTO! ★")
+                        print("🎉 ¡Has descubierto el número secreto!")
+                        print("🪙 +100 oro")
+                        print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+                        break
+                    mision7_completada_bool = True
                 
             else: #Jara: si en el menu eliges el 7 y ya completaste la misión para que te salga que ya se completó#
                 print("╔══════════════════════════════╗")
