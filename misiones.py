@@ -297,6 +297,53 @@ def cargar_misiones(linea_usuario_int):
 
 
         ###############################################
+        #### NÚMERO DE MISIÓN: 3                   ####
+        #### NOMBRE DE MISIÓN: MODO ESTUDIO        ####
+        #### AUTOR: Uhaitz                         ####
+        ###############################################
+
+        elif mision_selecionada_int ==3:
+            if mision3_completada_bool == False: #Jara: en caso de que sea la primera vez que hagas la misión, puedas completarla#
+                print()
+                
+                print("╔════════════════════════════╗")
+                print("   ★ MISIÓN SELECCIONADA ★")
+                print("     (ง'̀-'́)ง MODO ESTUDIO")
+                print("╚════════════════════════════╝")
+                
+                print()
+                
+                #Jara: Breve explicación de en que consiste la misión para el usuario#
+                print("◆ Misión:")
+                print("   Estudia y demuestra tu concentración.")
+                print("◆ Objetivo:")
+                print("   ✓ Estudia durante un máximo de 60 minutos.")
+                print("◆ Recompensa:")
+                print("   🪙 Cuanto más estudies, más oro ganarás.")
+                print("◆ Máximo:")
+                print("   ★ 60 minutos = 100 🪙 oro")
+                print()
+                print("⚠️ ¡No superes el límite de 60 minutos!")
+                print("💤 ¡Recuerda hacer descansos para recuperar energía!")
+                print("(ง •̀_•́)ง ¡CONCENTRACIÓN AL MÁXIMO!")
+                
+                print()
+
+                #EMPIEZA AQUÍ UHAITZ#
+                #####################
+
+                mision3_completada_bool = True
+
+            else: #Jara: si en el menu eliges el 3 y ya completaste la misión para que te salga que ya se completó#
+                print("╔══════════════════════════════╗")
+                print("    ★ MISIÓN YA COMPLETADA ★")
+                print("╚══════════════════════════════╝")
+                print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+        #FIN MISIÓN 3#
+
+
+
+        ###############################################
         #### NÚMERO DE MISIÓN: 4                   ####
         #### NOMBRE DE MISIÓN: MAESTRO DEL SABER   ####
         #### AUTOR: Jara                           ####
@@ -550,7 +597,7 @@ def cargar_misiones(linea_usuario_int):
                     print(">>> Pulsa una tecla para volver al menú de misiones <<<")
                 else:
                     print("╔══════════════════════════════════╗")
-                    print("       ⚠️ MISIÓN NO COMPLETADA")
+                    print("       ⚠️ MISIÓN FALLIDA")
                     print("╚══════════════════════════════════╝")
                     print("          (×_×) ¡OH, NO!")
                     print("       📜 RESULTADOS")
