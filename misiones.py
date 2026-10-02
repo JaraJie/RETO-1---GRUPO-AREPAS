@@ -613,7 +613,7 @@ def cargar_misiones(linea_usuario_int):
                         print("★ (^_^) ¡CORRECTO! ★")
                         print("🎉 ¡Has descubierto el número secreto!")
                         print("🪙 +100 oro")
-                        input(">>> Pulsa una tecla para volver al menú de misiones <<<")
+                        print(">>> Pulsa una tecla para volver al menú de misiones <<<")
                         monedas_conseguidas_int = 100
                         break #Jara: como acertaste el número para que salga del bucle#
                     mision7_completada_bool = True #Jara: como ya completaste la misión el valor se volvera cierto#
@@ -622,7 +622,7 @@ def cargar_misiones(linea_usuario_int):
                 print("╔══════════════════════════════╗")
                 print("    ★ MISIÓN YA COMPLETADA ★")
                 print("╚══════════════════════════════╝")
-                input(">>> Pulsa una tecla para volver al menú de misiones <<<")
+                print(">>> Pulsa una tecla para volver al menú de misiones <<<")
             #FIN MISIÓN ESPECIAL#
 
 
