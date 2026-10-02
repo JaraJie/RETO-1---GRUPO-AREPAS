@@ -298,7 +298,7 @@ def cargar_misiones(linea_usuario_int):
         ###############################################
         #### NÚMERO DE MISIÓN: 4                   ####
         #### NOMBRE DE MISIÓN: MAESTRO DEL SABER   ####
-        #### AUTOR: Mikel                          ####
+        #### AUTOR: Jara                           ####
         ###############################################
 
         elif mision_selecionada_int == 4:
@@ -328,6 +328,7 @@ def cargar_misiones(linea_usuario_int):
 
                 print()
 
+                #pregunta 1#
                 print("╭────────── ✦ PREGUNTA 1 ✦ ──────────╮")
                 print("🧠 ¿Cuál es el planeta más cercano al Sol?")
                 print("   A) Venus")
@@ -335,15 +336,16 @@ def cargar_misiones(linea_usuario_int):
                 print("   C) Marte")
                 print("   D) Júpiter")
                 respuesta1_str = input()
-                respuesta1_bool = respuesta1_str == 'b' or respuesta1_str == 'B'
+                respuesta1_bool = respuesta1_str == 'b' or respuesta1_str == 'B' #Jara: en caso de que el usuario responda b o B para que la variable sea correcta#
 
-                if respuesta1_bool == 1:
+                if respuesta1_bool == 1: #Jara: como la variable es correcta será igual a 1#
                     print("★ (^_^) ¡CORRECTO! +10 🪙 ★")
-                else:
+                else: #Jara: en caso de ser incorrecta printeará lo siguiente#
                     print("✗ (╥﹏╥) ¡INCORRECTO! ★")
 
                 print()
 
+                #pregunta 2#
                 print("╭────────── ✦ PREGUNTA 2 ✦ ──────────╮")
                 print("🧠 ¿En qué año llegó Cristóbal Colón a América?")
                 print("   A) 1512")
@@ -360,6 +362,7 @@ def cargar_misiones(linea_usuario_int):
 
                 print()
 
+                #pregunta 3#
                 print("╭────────── ✦ PREGUNTA 3 ✦ ──────────╮")
                 print("🧠 ¿Cuál es la capital de España?")
                 print("   A) Barcelona")
@@ -376,6 +379,7 @@ def cargar_misiones(linea_usuario_int):
 
                 print()
 
+                #pregunta 4#
                 print("╭────────── ✦ PREGUNTA 4 ✦ ──────────╮")
                 print("🧠 ¿Cómo se llama el proceso por el cual las plantas producen su propio alimento?")
                 print("   A) Respiración")
@@ -392,6 +396,7 @@ def cargar_misiones(linea_usuario_int):
 
                 print()
 
+                #pregunta 5#
                 print("╭────────── ✦ PREGUNTA 5 ✦ ──────────╮")
                 print("🧠 ¿Quién pintó la Mona Lisa o Gioconda?")
                 print("   A) Leonardo da Vinci")
@@ -406,11 +411,11 @@ def cargar_misiones(linea_usuario_int):
                 else:
                     print("✗ (╥﹏╥) ¡INCORRECTO! ★")
                 
-                monedas_totales_int = (respuesta1_bool + respuesta2_bool + respuesta3_bool + respuesta4_bool + respuesta5_bool) * 10
+                monedas_totales_int = (respuesta1_bool + respuesta2_bool + respuesta3_bool + respuesta4_bool + respuesta5_bool) * 10 #Jara: para que sume la cantidad de respuestas correctas. La multipicación se debe a que una respuesta correcta equivale a 10 monedas#
                 monedas_conseguidas_int = monedas_totales_int
                 print()
                 
-                if monedas_totales_int == 0:
+                if monedas_totales_int == 0: #Jara: en caso de que no aciertes ninguna pregunta y no consigas monedas que aparezca lo siguiente#
                     print("╭──────────────────────────────╮")
                     print("      (×_×) MISIÓN FALLIDA")
                     print("╰──────────────────────────────╯")
@@ -418,7 +423,7 @@ def cargar_misiones(linea_usuario_int):
                     print("(^_^) ¡No te rindas!")
                     print("¡La próxima misión te espera!")
                     print(">>> Pulsa una tecla para volver al menú de misiones <<<")
-                else:
+                else: #Jara: en caso de conseguir monedas que aparezca lo siguiente#
                     print("╭──────────────────────────────╮")
                     print("     (ﾉ◕ヮ◕)ﾉ ¡ENHORABUENA!")
                     print("╰──────────────────────────────╯")
@@ -426,7 +431,8 @@ def cargar_misiones(linea_usuario_int):
                     print("¡La próxima misión te espera!")
                     print(">>> Pulsa una tecla para volver al menú de misiones <<<")
 
-                mision4_completada_bool = True
+                mision4_completada_bool = True #Jara: al finalizar la misión para que la variable de mision completada se vuelva verdadera#
+            
             else: #Jara: si en el menu eliges el 4 y ya completaste la misión para que te salga que ya se completó#
                 print("╔══════════════════════════════╗")
                 print("    ★ MISIÓN YA COMPLETADA ★")
