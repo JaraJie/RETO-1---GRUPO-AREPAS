@@ -243,7 +243,12 @@ def ver_personaje(linea_usuario_int):
         print("                  ⣾⣿⠹⣷⡀     ⢀⣾⠏⣿⣷")
         print("                 ⣾⡿   ⠻⣦⡀ ⢀⣴⠟   ⢿⣷")
     elif lista_datos_usuario_str[4] == "antenas":
-        print()
+        print("              ⣠⣶⣄                    ⣠⣶⣄")
+        print("              ⠈⠻⣿⣦                 ⣴⣿⠟⠁")
+        print("                  ⠙⣷⡀            ⢀⣾⠋")
+        print("                    ⠹⣦          ⣴⠏")
+        print("                      ⢻⣆      ⣰⡟")
+        print("                       ⢿⡄    ⢠⡿")
 
     #Imprimir personaje basico
     print("                    ⣀⣤⣤⣤⣤⣤⣤⣤⣤⣤⣄")
