@@ -16,19 +16,27 @@ from misiones import cargar_misiones
 import os
 
 #Menu inicial donde Iniciaremos sesion o Crearemos una cuenta
-print("Bienvenido a Skillia")
+print()
+print("╭──────────── ✦ ────────────╮")
+print("        ★ SKILLIA ★")
+print("     (｡•̀ᴗ-)✧ ¡Bienvenido!")
+print("╰───────────────────────────╯")
 
 #usamos un bucle para que el usuario elija si o si una de las 2 opciones
 while True:
-    print("Elija una opción: ")
-    print("1) Crear Cuenta")
-    print("2) Iniciar Sesion")
+    print()
+    print("★ Selecciona una opción → ")
+    print("◆ [1] 📝 Crear cuenta")
+    print("◆ [2] 🔑 Iniciar sesión")
     numero_seleccion_int = int(input())
     #si el numero introducido por el usuario esta asociado a una opcion, salimos del bucle. 
     #En caso contrario, permanecemos en el bucle hasta que el usuario de una opcion valida
     if numero_seleccion_int == 1 or numero_seleccion_int == 2:
         break
-    print("Opcion no valida. Intentelo de nuevo")
+    print()
+    print("⚠️ ────── OPCIÓN NO VÁLIDA ────── ⚠️")
+    print("(×_×) Esa opción no existe.")
+    print("(^_^) ¡Inténtalo de nuevo!")
 
 #Primera Opcion: Crear una cuenta.
 if numero_seleccion_int == 1:
@@ -50,7 +58,12 @@ datos_usuario = lineas_usuarios[linea_usuario_int].strip().split(",")
 nombre_usuario = datos_usuario[0]
 
 
-print("Bienvenido a Skillia ", nombre_usuario)
+print()
+print("╭──────────── ✦ ────────────╮")
+print("   (｡•̀ᴗ-)✧ ¡Bienvenido a")
+print("        ★ SKILLIA ★")
+print("        ", nombre_usuario)
+print("╰───────────────────────────╯")
 
 #Tras iniciar sesion/crear cuenta, accedemos al menu principal de la app
 numero_seleccion_int = -1
@@ -62,12 +75,22 @@ while numero_seleccion_int != 0:
     numero_no_valido_bool = True
     while numero_no_valido_bool:
         #Opciones que hay por el momento. Añadir más si tenemos tiempo
-        print("Elija una opción: ")
-        print("0) Apagar app")
-        print("1) Acceder a misiones ")
-        print("2) Ver personaje")
-        print("3) Ajustes de cuenta (PROXIMAMENTE)")
-    
+        print()
+        print("╭──────────────────────────────────╮")
+        print("       ★ SKILLIA — MAIN MENU ★")
+        print("╰──────────────────────────────────╯")
+        print()
+        print("      (｡•̀ᴗ-)✧ ¿Qué quieres hacer?")
+        print()
+        print("━━━━━━━━━━━━━━ ✦ ━━━━━━━━━━━━━━")
+        print()
+        print("   [0] 🔴 Apagar app")
+        print("   [1] ⚔️  Acceder a misiones")
+        print("   [2] 🧙 Ver personaje")
+        print("   [3] ⚙️  Ajustes de cuenta")
+        print("       └─ 🔒 PRÓXIMAMENTE")
+        print()
+        print("━━━━━━━━━━━━━━ ✦ ━━━━━━━━━━━━━━")
         numero_seleccion_int = int(input())
         OPCION_MINIMA = 0
         OPCION_MAXIMA = 3
@@ -78,11 +101,19 @@ while numero_seleccion_int != 0:
         if numero_seleccion_int >= OPCION_MINIMA and numero_seleccion_int <= OPCION_MAXIMA:
             numero_no_valido_bool = False
         else:
-            print("Opcion no valida. Intentalo de nuevo")
+            print()
+            print("⚠️ ────── OPCIÓN NO VÁLIDA ────── ⚠️")
+            print("(×_×) Esa opción no existe.")
+            print("(^_^) ¡Inténtalo de nuevo!")
     
     #Realizar la opcion elegida:
     if numero_seleccion_int == 0:
-        print("Apagar aplicación seleccionado")
+        print()
+        print("╔══════════════════════════════════╗")
+        print("        🔴 CERRANDO SKILLIA")
+        print("╚══════════════════════════════════╝")
+        print("        (；￣Д￣) ¡Hasta pronto!")
+        print("        ★ ¡GRACIAS POR JUGAR! ★")
         continue
     
     elif numero_seleccion_int == 1:
@@ -97,10 +128,23 @@ while numero_seleccion_int != 0:
         ver_personaje(linea_usuario_int)
         continue
     elif numero_seleccion_int == 3:
-        print("Ajustes de Cuenta. Opcion no disponible por el momento")
-        print("PROXIMAMENTE")
-        input("Pulse cualquier tecla para volver al menu principal")
+        print()
+        print("╔══════════════════════════════════╗")
+        print("       ⚙️ AJUSTES DE CUENTA")
+        print("╚══════════════════════════════════╝")
+        print()
+        print("          (¬‿¬) ¡Ups!")
+        print()
+        print("   🔒 Esta sección todavía no está")
+        print("      disponible.")
+        print()
+        print("          ★ PRÓXIMAMENTE ★")
+        print()
+        print("   (^_^) ¡Estamos trabajando en ello!")
+        print()
+        print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+        input("   ➤ Pulsa ENTER para volver al menú...")
 
     os.system("cls")
     
-input("Apagando Aplicación...")
+input("Apagando Skillia...")
