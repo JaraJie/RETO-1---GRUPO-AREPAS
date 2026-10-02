@@ -13,7 +13,7 @@
 #comando para importar las funciones de crear_cuenta y iniciar_sesion de usuario.py
 from usuario import crear_cuenta, iniciar_sesion, ver_personaje
 from misiones import cargar_misiones
-import subprocess, sys
+import os
 
 #Menu inicial donde Iniciaremos sesion o Crearemos una cuenta
 print("Bienvenido a Skillia")
@@ -55,10 +55,11 @@ while numero_seleccion_int != 0:
         print("0) Apagar app")
         print("1) Acceder a misiones ")
         print("2) Ver personaje")
+        print("3) Ajustes de cuenta (PROXIMAMENTE)")
     
         numero_seleccion_int = int(input())
         OPCION_MINIMA = 0
-        OPCION_MAXIMA = 2
+        OPCION_MAXIMA = 3
         #Comprobamos si la opcion es valida, si lo es cambia el booleano a false para poder salir del bucle
         if numero_seleccion_int >= OPCION_MINIMA and numero_seleccion_int <= OPCION_MAXIMA:
             numero_no_valido_bool = False
@@ -81,5 +82,8 @@ while numero_seleccion_int != 0:
         #encargado de mostrar los datos del personaje.
         ver_personaje(linea_usuario_int)
         continue
+    elif numero_seleccion_int == 3:
+        print("Ajustes de Cuenta. Opcion no disponible por el momento")
+        print("PROXIMAMENTE")
         
 input("Apagando Aplicación...")
