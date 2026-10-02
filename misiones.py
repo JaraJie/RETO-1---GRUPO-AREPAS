@@ -329,20 +329,33 @@ def cargar_misiones(linea_usuario_int):
                 
                 print()
 
-                #EMPIEZA AQUÍ UHAITZ#
-                #####################
-                print("Has acabado con la misión? Cuánto has estudiado? (escribe los numeros en minutos):") # Aqui pedimos en numero en minutos para que no haya confusiones
+                print("⏱️ ¿Cuántos minutos has estudiado?")
+                print("➤ Escribe el tiempo en minutos.")# Aqui pedimos en numero en minutos para que no haya confusiones
                 tiempomisionestudio_int = int(input())
+
+                print()
+                print("━━━━━━━━━━━━ 📖 ━━━━━━━━━━━━")
+
                 if tiempomisionestudio_int <= 14:
-                    print("Misión fallida, no has ganado ninguna moneda")
+                    print("(×_×) ¡OH, NO!")
+                    print("📚 Has estudiado muy poco.")
+                    print("🪙 RECOMPENSA: +0 ORO")
                 elif 31 > tiempomisionestudio_int > 14:
-                    print("Bien hecho, aqui tienes 50 monedas!")
+                    print("(^_^) ¡BIEN HECHO!")
+                    print("📚 ¡Has conseguido estudiar!")
+                    print("🪙 RECOMPENSA: +50 ORO")
                 elif 46 > tiempomisionestudio_int > 30:
-                    print("Muy bien hecho, tu recompensa son 75 monedas!")
+                    print("(ง •̀_•́)ง ¡MUY BIEN!")
+                    print("📚 ¡Buen esfuerzo de estudio!")
+                    print("🪙 RECOMPENSA: +75 ORO")
                 elif 61 > tiempomisionestudio_int > 45:
-                    print("Excelente! Buen trabajo, tu recompensa son 100 monedas!!!")
+                    print("★ (^▽^) ¡EXCELENTE! ★")
+                    print("📚 ¡Has dado lo mejor de ti!")
+                    print("🪙 RECOMPENSA: +100 ORO")
                 else:
-                    print("Excelente trabajo, ganas 100 monedas! Pero recuerda que hay que descansar")
+                    print("★ (^▽^) ¡EXCELENTE! ★")
+                    print("💤 ¡Pero recuerda hacer descansos")
+                    print("🪙 RECOMPENSA: +100 ORO")
                 # En estas comprobaciones le pedimos la usuario cuantos minutos ha estudiado, dependiendo del tiempo se le dan mas o menos monedas.
                 mision3_completada_bool = True
 
