@@ -450,7 +450,7 @@ def cargar_misiones(linea_usuario_int):
     
         elif mision_selecionada_int == 5:
             
-            if mision5_completada_bool == False:
+            if mision5_completada_bool == False: #Jara: para poder completar la misión si aún no esta completada#
                 #Explicacion visual de la misión
                 print("╔════════════════════════════╗")
                 print("   ★ MISIÓN 5 SELECCIONADA ★")
@@ -560,8 +560,8 @@ def cargar_misiones(linea_usuario_int):
                     print("   (ง •̀_•́)ง ¡No te rindas!")
                     print()
                     print(">>> Pulsa una tecla para volver al menú de misiones <<<")
-                mision5_completada_bool = True
-            else:
+                mision5_completada_bool = True #Jara: para que la misión se guarde como completada una vez hecha#
+            else: #Jara: para que si vuelves a seleccionar una misión ya hecha aparezca lo siguiente#
                 print("╔══════════════════════════════╗")
                 print("    ★ MISIÓN YA COMPLETADA ★")
                 print("╚══════════════════════════════╝")
