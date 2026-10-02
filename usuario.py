@@ -23,14 +23,21 @@ def crear_cuenta():
     ruta_usuarios = os.path.join(ruta_carpeta, "usuarios.txt")
 
     #Aqui ya comenzamos a trabajar con los datos para crear la cuenta
-    print("Rellene estos datos para crear su nueva cuenta: ")
-    print("Introduzca su nombre")
+    print()
+    print("╔══════════════════════════════════╗")
+    print("       📝 CREACIÓN DE CUENTA")
+    print("╚══════════════════════════════════╝")
+    print()
+    print("(｡•̀ᴗ-)✧ ¡Vamos a crear tu perfil!")
+    print("◆ Introduce los siguientes datos:")
+    print()
+    print("   👤 Nombre → ")
     nombre_usuario_str = input()
     
     #En este while, nos encargamos de que el correo no exista ya en otra cuenta
     while True:
         
-        print("Introduzca su cuenta de gmail: ")
+        print("   📧 Gmail → ")
         correo_usuario_str = input()
         
         # Abrimos el archivo usuarios.txt en modo lectura (r) y lo guardamos en archivo_usuarios, para poder acceder al texto del archivo
@@ -60,31 +67,49 @@ def crear_cuenta():
             break
         
         #En este caso, como no es un correo valido, volvemos al inicio del while
-        print("Ese correo ya esta registrado. Introduzca otro correo no utilizado") 
+        print()
+        print("⚠️ ¡CORREO YA REGISTRADO!")
+        print("📧 Ese Gmail ya está vinculado a otra cuenta.")
+        print("(^_^) Introduce un correo diferente.")
+        print()
     
     #continuamos pidiendole al usuario que introduzca la contraseña nueva que va a crear en su cuenta
-    print("Introduzca su contraseña nueva: ")
+    print("   🔐 Contraseña → ")
     contrasenia_usuario_str = input()
 
     #Opciones de personalización
-    print("¿Quieres añadirle algún sombrero a tu personaje? (si/no)")
+    print()
+    print("🎩 ¡PERSONALIZA TU PERSONAJE!")
+    print("(｡•̀ᴗ-)✧ Dale un toque único a tu avatar.")
+    print()
+    print("◆ ¿Quieres añadirle un sombrero? (sí/no) → ")
     anadir_sombrero_str = input().lower()
-    anadir_sombrero_bool = anadir_sombrero_str == "si"
+    anadir_sombrero_bool = anadir_sombrero_str == "si" or anadir_sombrero_str == "sí"
     seleccion_sombrero_int = 0
 
     #Si el usuario elige personalizar añadiendo un sombrero, le aparece el menu para que escoja cual
     if anadir_sombrero_bool == True:
         while True:
-            print("Que opción de sombrero quieres para tu personaje: ")
-            print("1) Corona")
-            print("2) Sombrero de copa")
-            print("3) Cuernos")
-            print("4) Antenas")
-            print("0) Ninguno")
+            print()
+            print("╭────────── 🎀 PERSONALIZACIÓN ──────────╮")
+            print("         ✨ ELIGE TU ACCESORIO ✨")
+            print("╰───────────────────────────────────────╯")
+            print()
+            print("   👑 [1] Corona")
+            print("   🎩 [2] Sombrero de copa")
+            print("   😈 [3] Cuernos")
+            print("   👽 [4] Antenas")
+            print("   🚫 [0] Ninguno")
+            print()
+            print("   ➤ Elige tu accesorio: ")
             seleccion_sombrero_int = int(input())
             if seleccion_sombrero_int >= 0 and seleccion_sombrero_int <= 4:
                 break
-            print("Opcion no valida. Intentelo de nuevo")
+            print()
+            print("⚠️ ¡OPCIÓN NO VÁLIDA!")
+            print("(×_×) Ese accesorio no existe.")
+            print("(^_^) ¡Elige una opción de la lista!")
+            print()
 
     #Depende de lo que haya elegido, se gaurdara en la variable un string de acorde a su elección
     if anadir_sombrero_bool == False or seleccion_sombrero_int == 0:
@@ -122,7 +147,12 @@ def crear_cuenta():
     # Cerramos el archivo una vez terminamos de escribir en él
     archivo_usuarios.close()
 
-    print("Usuario registrado correctamente")
+    print()
+    print("╭────────── ✦ SKILLIA ✦ ──────────╮")
+    print("    (^▽^) ¡REGISTRO COMPLETADO!")
+    print("   ✨ ¡Usuario creado con éxito!")
+    print("╰────────────────────────────────╯")
+    print()
     #Devolvemos a main el dato de la linea donde se ha guardado usuario en el txt
     return linea_usuario_int
 #Fin de la funcion crear usuario
@@ -139,7 +169,7 @@ def iniciar_sesion():
     #Comprobamos en el while si el correo ya existe en usuarios.txt para poder iniciar sesion
     while True:
         
-        print("Introduzca su correo electronico: ")
+        print("📧 Introduce tu correo electrónico → ")
         correo_usuario_str = input()
         
         #Abrimos el archivo de texto en modo lectura (r)
@@ -165,26 +195,30 @@ def iniciar_sesion():
         if existe_correo_bool == True:
             break
         #Si el correo no existe, volvemos al inicio del bucle while para pedir que introduzca un correo valido qu eya exista
-        print("No hay ninguna cuenta asociada a ese correo. Introduzca un correo registrado")
+        print()
+        print("⚠️ ¡CUENTA NO ENCONTRADA!")
+        print("(×_×) No existe ninguna cuenta asociada a ese correo.")
+        print("📧 Introduce un correo registrado en Skillia.")
+        print()
     
     #Tras tener el correo, comprobamos si la contraseña que nos dice el usuario es la correcta
     while True:
         
-        print("Introduzca la contraseña")
+        print("🔐 Introduce tu contraseña → ")
         contrasenia_usuario_str = input()
         
         #Comprobamos si ambas contraseñas son iguale, la que el usuario nos acaba de decir con la que esta guardada en usuarios.txt
         #Como ya tenemos la lista de datos correcta del while y for anterior, podemos acceder a ella mediante la variable lista_datos_usuarios_guardados_str
         #en la posicion 2, que es la que guarda la contraseña
         if contrasenia_usuario_str == lista_datos_usuarios_guardados_str[2]:
-            print("Contraseña correcta")
+            print("✓ 🔓 ¡CONTRASEÑA CORRECTA! Bienvenido a Skillia. ★")
             break
         
         #En caso de fallar la contraseña, se vuelve al inicio del bucle while
-        print("Contrasña incorrecta. Intentelo de nuevo")
+        print("⚠️ (×_×) ¡CONTRASEÑA INCORRECTA! Prueba de nuevo. 🔐")
 
     #Hemos comprobado que el inicio de sesion ha sido correcto, por lo que ya hemos terminado la funcion iniciar sesion
-    print("Iniciando sesion...")
+    print("🔓 Iniciando sesión en Skillia... ✨")
     #Devolvemos la linea donde esta el usuario que va a iniciar sesion
     return linea_usuario_int
     
@@ -213,9 +247,15 @@ def ver_personaje(linea_usuario_int):
     archivo_usuarios.close()
 
     #Primera Version de imprimir por pantalla el usuario
-    print("Nombre: ", lista_datos_usuario_str[0])
-    print("Clase: Caballero") #En esta demo, solo existe la clase caballero
-    print("Monedas: ", lista_datos_usuario_str[3])
+    print()
+    print("╔══════════════════════════════════╗")
+    print("      ⚔️ FICHA DE PERSONAJE")
+    print("╚══════════════════════════════════╝")
+    print()
+    print("👤 Nombre: ", lista_datos_usuario_str[0])
+    print("🛡️ Clase: Caballero") #En esta demo, solo existe la clase caballero
+    print("🪙 Monedas: ", lista_datos_usuario_str[3])
+    print()
 
     #Depende del sombrero que esta guardado, imprimirá un sombrero diferente o no imprimira ningun sombrero
     if lista_datos_usuario_str[4] == "corona":
@@ -289,4 +329,4 @@ def ver_personaje(linea_usuario_int):
 
 
     #Input final para salir de la funcion cuando
-    input("Pulse cualquier tecla para volver al menu principal")
+    input("   ➤ Pulsa cualquier tecla para volver al menú principal...")
