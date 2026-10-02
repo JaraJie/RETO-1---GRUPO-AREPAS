@@ -72,7 +72,7 @@ while numero_seleccion_int != 0:
         OPCION_MINIMA = 0
         OPCION_MAXIMA = 3
 
-
+        os.system("cls")
 
         #Comprobamos si la opcion es valida, si lo es cambia el booleano a false para poder salir del bucle
         if numero_seleccion_int >= OPCION_MINIMA and numero_seleccion_int <= OPCION_MAXIMA:
