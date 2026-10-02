@@ -665,3 +665,4 @@ def cargar_misiones(linea_usuario_int):
 
         #Input final para que no se cierre el programa
         input()
+        os.system("cls")
