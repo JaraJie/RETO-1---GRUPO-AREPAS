@@ -614,7 +614,7 @@ def cargar_misiones(linea_usuario_int):
                         print("🪙 +100 oro")
                         print(">>> Pulsa una tecla para volver al menú de misiones <<<")
                         break #Jara: como acertaste el número para que salga del bucle#
-                    mision7_completada_bool = True
+                    mision7_completada_bool = True #Jara: como ya completaste la misión el valor se volvera cierto#
                 
             else: #Jara: si en el menu eliges el 7 y ya completaste la misión para que te salga que ya se completó#
                 print("╔══════════════════════════════╗")
