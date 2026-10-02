@@ -450,7 +450,7 @@ def cargar_misiones(linea_usuario_int):
         elif mision_selecionada_int == 5:
             
             if mision5_completada_bool == False:
-                
+                #Explicacion visual de la misión
                 print("╔════════════════════════════╗")
                 print("   ★ MISIÓN 5 SELECCIONADA ★")
                 print("(ง •̀_•́)ง OPERACIÓN: CASA LIMPIA")
@@ -460,8 +460,11 @@ def cargar_misiones(linea_usuario_int):
                 print("El objetivo de esta misión es limpiar la casa.")
                 print("Deberás completar todas las tareas de limpieza para finalizar la misión.")
 
+                #Pregunta si hiciste cada tarea
+
                 respuesta1_str= input("¿Has completado la tarea de limpieza? (sí/no): ")
-                
+
+                #Si la respuesta es si, la variable se vuelve True y se guarda como 1
                 respuesta1_bool = respuesta1_str == "si" or respuesta1_str == "sí"
 
                 respuesta2_str= input("¿Has hecho la cama? (sí/no): ")
@@ -481,8 +484,10 @@ def cargar_misiones(linea_usuario_int):
                                                 
                 respuesta5_bool = respuesta5_str == "si" or respuesta5_str == "sí"
 
+                #Suma de todas las respuestas correctas
                 resultado_int = respuesta1_bool + respuesta2_bool + respuesta3_bool + respuesta4_bool + respuesta5_bool
 
+                #Dependiendo del resultado, se dan mas o menos monedas
                 if resultado_int == 1:
                     print("Has conseguido 10 monedas")
                 elif resultado_int == 2:
