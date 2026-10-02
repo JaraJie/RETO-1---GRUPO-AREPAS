@@ -627,6 +627,8 @@ def cargar_misiones(linea_usuario_int):
         elif mision_selecionada_int == 0:
             print("(^-^) ¡Has salido del menú de misiones!")
             print("★ ¡Hasta la próxima, aventurero! ★")
+            input("Pulsa cualquier tecla para volver al menu principal")
+            os.system("cls")
             break
 
         #Añadir monedas a la base de datos del usuario en el txt
@@ -658,5 +660,7 @@ def cargar_misiones(linea_usuario_int):
             #cerramos el archivo
             archivo_usuarios.close()
         
+        os.system("cls")
+
         #Input final para que no se cierre el programa
         input()
