@@ -78,7 +78,7 @@ def crear_cuenta():
             print("Que opción de sombrero quieres para tu personaje: ")
             print("1) Corona")
             print("2) Sombrero de copa")
-            print("3) Orejas de gato")
+            print("3) Cuernos")
             print("4) Antenas")
             print("0) Ninguno")
             seleccion_sombrero_int = int(input())
@@ -94,7 +94,7 @@ def crear_cuenta():
     elif seleccion_sombrero_int == 2:
         sombrero_usuario_str = "sombrerocopa"
     elif seleccion_sombrero_int == 3:
-        sombrero_usuario_str = "orejasgato"
+        sombrero_usuario_str = "cuernos"
     else:
         sombrero_usuario_str = "antenas"
 
