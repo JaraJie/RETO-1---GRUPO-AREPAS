@@ -217,8 +217,14 @@ def ver_personaje(linea_usuario_int):
     print("Clase: Caballero") #En esta demo, solo existe la clase caballero
     print("Monedas: ", lista_datos_usuario_str[3])
 
+    #Depende del sombrero que esta guardado, imprimirá un sombrero diferente o no imprimira ningun sombrero
     if lista_datos_usuario_str[4] == "corona":
-        print()
+        print("                   ⣀     ⣀     ⣀")
+        print("                  ⣸⣿⣇   ⣸⣿⣇   ⣸⣿⣇")
+        print("                 ⣰⣿⣿⣷⡀ ⣰⣿⣿⣷⡀ ⣰⣿⣿⣷")
+        print("                 ⣿⣿⣿⣿⣷⣾⣿⣿⣿⣿⣷⣾⣿⣿⣿⣿")
+        print("                 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+        print("                 ⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿")
     elif lista_datos_usuario_str[4] == "sombrerocopa":
         print()
     elif lista_datos_usuario_str[4] == "orejasgato":
@@ -227,6 +233,42 @@ def ver_personaje(linea_usuario_int):
         print()
 
     #Imprimir personaje basico
+    print("                    ⣀⣤⣤⣤⣤⣤⣤⣤⣤⣤⣄")
+    print("                 ⣠⡾⠋          ⠙⢷⣄")
+    print("                ⣰⡟              ⢻⣆")
+    print("                ⣿      ⣴⡄  ⣴⡄    ⣿")
+    print("                ⣿      ⠛⠃  ⠛⠃    ⣿")
+    print("                ⣿                ⣿")
+    print("                ⣿      ⣀    ⢀    ⣿")
+    print("                ⣿      ⠙⢶⣤⡴⠋     ⣿")
+    print("                ⠹⣦              ⣴⠏")
+    print("                  ⠙⢷⣤⣀       ⣀⣤⡾⠋")
+    print("                      ⠉⠛⠛⠛⠛⠉")
+    print("     ⣤⣶⣶⣶⣶⣦⣤⣤⣤⣶⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣦⣤⣤⣤⣶⣶⣶⣶⣶⣄")
+    print("     ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+    print("    ⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+    print("    ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+    print("    ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+    print("    ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+    print("    ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+    print("    ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+    print("    ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇")
+    print("    ⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ⢻⣿⣿⣿⣿⣿⣿⣿⣿⡇")
+    print("    ⢹⡿⠿⠿⠿⠿⠿⠿⣿⠁⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ⢸⡿⠿⠿⠿⠿⠿⠿⣿⠃")
+    print("    ⢸⡇      ⣿ ⢨⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ⢸⣇      ⣿")
+    print("    ⢸⡇      ⣿ ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿ ⢸⣿      ⣿")
+    print("    ⢸⣧⣤⣤⣤⣤⣤⣤⡿ ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿ ⠘⣿⣤⣤⣤⣤⣤⣤⣿⠆")
+    print("              ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿")
+    print("              ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆")
+    print("              ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿ ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇")
+    print("              ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿ ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇")
+    print("              ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿ ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇")
+    print("              ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿ ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇")
+    print("              ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿ ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇")
+    print("              ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿ ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇")
+    print("              ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿ ⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇")
+    print("              ⠈⠛⠛⠛⠛⠛⠛⠛⠛⠋  ⠙⠛⠛⠛⠛⠛⠛⠛⠋")
+
 
     #Input final para salir de la funcion cuando
     input("Pulse cualquier tecla para volver al menu principal")
