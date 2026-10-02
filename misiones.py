@@ -331,7 +331,7 @@ def cargar_misiones(linea_usuario_int):
 
                 #EMPIEZA AQUÍ UHAITZ#
                 #####################
-                print("Has acabado con la misión? Cuánto has estudiado? (escribe los numeros en minutos):")
+                print("Has acabado con la misión? Cuánto has estudiado? (escribe los numeros en minutos):") # Aqui pedimos en numero en minutos para que no haya confusiones
                 tiempomisionestudio_int = int(input())
                 if tiempomisionestudio_int <= 14:
                     print("Misión fallida, no has ganado ninguna moneda")
@@ -343,7 +343,7 @@ def cargar_misiones(linea_usuario_int):
                     print("Excelente! Buen trabajo, tu recompensa son 100 monedas!!!")
                 else:
                     print("Excelente trabajo, ganas 100 monedas! Pero recuerda que hay que descansar")
-
+                # En estas comprobaciones le pedimos la usuario cuantos minutos ha estudiado, dependiendo del tiempo se le dan mas o menos monedas.
                 mision3_completada_bool = True
 
             else: #Jara: si en el menu eliges el 3 y ya completaste la misión para que te salga que ya se completó#
