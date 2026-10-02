@@ -438,6 +438,71 @@ def cargar_misiones(linea_usuario_int):
                 print("    ★ MISIÓN YA COMPLETADA ★")
                 print("╚══════════════════════════════╝")
                 print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+        #FIN MISIÓN 4#
+
+
+        ###############################################
+        #### NÚMERO DE MISIÓN: 5                   ####
+        #### NOMBRE DE MISIÓN: CASA LIMPIA         ####
+        #### AUTOR: Erik                           ####
+        ###############################################
+    
+        elif mision_selecionada_int == 5:
+            
+            if mision5_completada_bool == False:
+                
+                print("╔════════════════════════════╗")
+                print("   ★ MISIÓN 5 SELECCIONADA ★")
+                print("(ง •̀_•́)ง OPERACIÓN: CASA LIMPIA")
+                print("╚════════════════════════════╝")
+
+                
+                print("El objetivo de esta misión es limpiar la casa.")
+                print("Deberás completar todas las tareas de limpieza para finalizar la misión.")
+
+                respuesta1_str= input("¿Has completado la tarea de limpieza? (sí/no): ")
+                
+                respuesta1_bool = respuesta1_str == "si" or respuesta1_str == "sí"
+
+                respuesta2_str= input("¿Has hecho la cama? (sí/no): ")
+                                
+                respuesta2_bool = respuesta2_str == "si" or respuesta2_str == "sí"
+
+                respuesta3_str= input("¿Has puesto y quitado la mesa? (sí/no): ")
+                                                
+                respuesta3_bool = respuesta3_str == "si" or respuesta3_str == "sí"
+
+                respuesta4_str= input("¿Has sacado la basura? (sí/no): ")
+                                                
+                respuesta4_bool = respuesta4_str == "si" or respuesta4_str == "sí"
+
+
+                respuesta5_str= input("¿Has fregado el suelo? (sí/no): ")
+                                                
+                respuesta5_bool = respuesta5_str == "si" or respuesta5_str == "sí"
+
+                resultado_int = respuesta1_bool + respuesta2_bool + respuesta3_bool + respuesta4_bool + respuesta5_bool
+
+                if resultado_int == 1:
+                    print("Has conseguido 10 monedas")
+                elif resultado_int == 2:
+                    print("Has conseguido 20 monedas")
+                elif resultado_int == 3:
+                    print("Has conseguido 30 monedas")
+                elif resultado_int == 4:
+                    print("Has conseguido 40 monedas")
+                elif resultado_int == 5:
+                    print("Has conseguido 50 monedas")
+                else:
+                    print("Te has quedado sin monedas.")
+
+                mision5_completada_bool = True
+            else:
+                print("╔══════════════════════════════╗")
+                print("    ★ MISIÓN YA COMPLETADA ★")
+                print("╚══════════════════════════════╝")
+                print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+
 
         ###############################################
         #### NÚMERO DE MISIÓN: 6                   ####
