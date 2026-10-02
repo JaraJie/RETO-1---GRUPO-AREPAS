@@ -237,8 +237,11 @@ def ver_personaje(linea_usuario_int):
         print("              ⣤⣤⣤⣿⣿⡇           ⢸⣿⣿⣤⣤⣤")
         print("              ⢸⣿⣿⣿⣿⣿⣧⣤⣤⣤⣤⣤⣤⣤⣤⣤⣼⣿⣿⣿⣿⣿⡇")
         print("              ⠸⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿")
-    elif lista_datos_usuario_str[4] == "orejasgato":
-        print()
+    elif lista_datos_usuario_str[4] == "cuernos":
+        print("                   ⢀⣴⡇        ⢸⣦⡀")
+        print("                  ⢀⣿⣿⡇        ⢸⣿⣿⡀")
+        print("                  ⣾⣿⠹⣷⡀     ⢀⣾⠏⣿⣷")
+        print("                 ⣾⡿   ⠻⣦⡀ ⢀⣴⠟   ⢿⣷")
     elif lista_datos_usuario_str[4] == "antenas":
         print()
 
