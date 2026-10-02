@@ -5,347 +5,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skillia</title>
+    <link rel="stylesheet" href="/static/estilos.css">
 </head>
 
-<body style="background-color: #10111b; color: white; font-family: Arial;">
+<body>
 
     <!-- CABECERA -->
-    <div style="background-color: #1b1d2c;
-                border: 1px solid #35394f;
-                padding: 20px;
-                display: flex;
-                align-items: center;">
+    <header class="cabecera">
 
-        <!-- NOMBRE DE LA APLICACIÓN -->
-        <div style="background-color: #242739;
-                    padding: 15px 25px;
-                    color: #ffd900;
-                    font-size: 50px;
-                    font-weight: bold;">
-            SKILLIA
-        </div>
+        <h1 class="nombreApp">SKILLIA</h1>
 
-        <!-- ESPACIO QUE EMPUJA LOS RECUADROS A LA DERECHA -->
-        <div style="flex: 1;"></div>
+        <div class="espacio"></div>
 
-        <!-- ORO -->
-        <div style="background-color: #242739;
-                    width: 110px;
-                    height: 80px;
-                    text-align: center;
-                    margin-left: 20px;">
-
+        <div class="marcador">
             <p>Oro</p>
-            <p>0</p>
-
+            <p id="oro">0</p>
         </div>
 
-        <!-- OLEADA -->
-        <div style="background-color: #242739;
-                    width: 110px;
-                    height: 80px;
-                    text-align: center;
-                    margin-left: 20px;">
-
+        <div class="marcador">
             <p>Oleada</p>
             <p id="oleada">1</p>
-
         </div>
 
-        <!-- RÉCORD -->
-        <div style="background-color: #242739;
-                    width: 110px;
-                    height: 80px;
-                    text-align: center;
-                    margin-left: 20px;">
-
-            <p>Récord</p>
+        <div class="marcador">
+            <p>Record</p>
             <p id="record">1</p>
-
         </div>
 
-    </div>
+    </header>
 
 
     <!-- ZONA PRINCIPAL -->
-    <div style="display: flex;
-                gap: 20px;
-                margin-top: 20px;">
+    <main class="zonaPrincipal">
 
         <!-- CUADRO IZQUIERDO -->
-        <div style="background-color: #1b1d2c;
-                    border: 1px solid #35394f;
-                    width: 300px;
-                    height: 500px;">
-        </div>
-
+        <aside class="cuadroIzquierdo"></aside>
+        
 
         <!-- CUADRO DEL COMBATE -->
-        <div style="background-color: #1b1d2c;
-                    border: 1px solid #35394f;
-                    flex: 1;
-                    height: 500px;
-                    position: relative;
-                    overflow: hidden;">
+        <section class="cuadroCombate">
 
             <!-- CAPA 1: FONDO -->
-            <img src="/static/Fondo.png"
-                 style="position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        z-index: 0;">
+            <img class="fondo" src="/static/Fondo.png" alt="Paisaje de montañas de noche">
 
-            <!-- CAPA 2: HÉROE (con id, transition y punto de giro en los pies) -->
-            <img id="heroe" src="/static/caballero.jpg"
-                 style="position: absolute;
-                        bottom: 30px;
-                        left: 10%;
-                        height: 150px;
-                        z-index: 1;
-                        transition: transform 0.3s;
-                        transform-origin: bottom center;">
+            <!-- CAPA 2: HEROE -->
+            <img id="heroe" class="personaje" src="/static/caballero.png" alt="Caballero">
 
-            <!-- CAPA 3: ENEMIGO -->
-            <img id="enemigo" src="/static/slime.jpg"
-                 style="position: absolute;
-                        bottom: 30px;
-                        right: 10%;
-                        height: 100px;
-                        z-index: 1;
-                        transition: transform 0.3s, opacity 0.5s;
-                        transform-origin: bottom center;">
+            <!-- CAPA 2: ENEMIGO -->
+            <img id="enemigo" class="personaje" src="/static/goblin.png" alt="Goblin">
 
-            <!-- BARRA DE VIDA DEL HÉROE -->
-            <div style="position: absolute;
-                        bottom: 200px;
-                        left: 10%;
-                        width: 120px;
-                        height: 12px;
-                        background-color: gray;
-                        z-index: 2;">
-
-                <div id="barra-heroe"
-                     style="width: 100%;
-                            height: 100%;
-                            background-color: green;">
-                </div>
-
+            <!-- BARRA DE VIDA DEL HEROE -->
+            <div id="cajaBarraHeroe" class="barra">
+                <div id="barra-heroe" class="relleno verde"></div>
             </div>
 
             <!-- BARRA DE VIDA DEL ENEMIGO -->
-            <div id="caja-barra-enemigo"
-                 style="position: absolute;
-                        bottom: 150px;
-                        right: 10%;
-                        width: 100px;
-                        height: 12px;
-                        background-color: gray;
-                        z-index: 2;
-                        transition: opacity 0.5s;">
-
-                <div id="barra-enemigo"
-                     style="width: 100%;
-                            height: 100%;
-                            background-color: red;">
-                </div>
-
+            <div id="cajaBarraEnemigo" class="barra">
+                <div id="barra-enemigo" class="relleno rojo"></div>
             </div>
 
-            <!-- PANTALLA DE GAME OVER (escondida hasta que muera el caballero) -->
-            <div id="pantalla-gameover"
-                 style="position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgba(0, 0, 0, 0.8);
-                        text-align: center;
-                        display: none;
-                        z-index: 10;">
-
-                <h1 style="color: #ff4d5e; font-size: 70px; margin-top: 110px; margin-bottom: 10px;">GAME OVER</h1>
-
-                <p style="font-size: 20px;">Oleada alcanzada:</p>
-                <p id="oleada-final" style="color: #f5c548; font-size: 40px; font-weight: bold; margin: 5px 0 25px 0;">1</p>
-
-                <button onclick="empezarCombate()"
-                        style="background-color: #f5c548; border: none; padding: 14px 28px; font-size: 16px; font-weight: bold; cursor: pointer;">
-                    VOLVER A INTENTAR
-                </button>
-
+            <!-- PANTALLA DE GAME OVER -->
+            <div id="pantalla-gameover" class="gameOver">
+                <h2>GAME OVER</h2>
+                <p>Oleada alcanzada:</p>
+                <p id="oleada-final" class="oleadaFinal">1</p>
+                <button class="boton" onclick="empezarCombate()">VOLVER A INTENTAR</button>
             </div>
+
+        </section>
+
+    </main>
+
+    <!-- BOTON PARA EMPEZAR EL COMBATE -->
+    <button id="boton-empezar" class="boton botonEmpezar" onclick="empezarCombate()">Empezar</button>
+
+
+    <!-- EQUIPAMIENTO Y ESTADISTICAS -->
+    <section class="panelEquipamiento">
+
+        <h2>EQUIPAMIENTO</h2>
+
+        <div class="contenidoEquipamiento">
+
+            <!-- ESPACIO PARA EL EQUIPAMIENTO -->
+            <div id="equipment-slots" class="huecosEquipamiento"></div>
+
+            <!-- ESTADISTICAS -->
+            <aside class="estadisticas">
+
+                <h3>ESTADISTICAS</h3>
+
+                <p>❤️ Vida <strong id="stat-vida">{{ jugador.vida_maxima }}</strong></p>
+
+                <p title="Daño de cada golpe">⚔️ Ataque <strong id="stat-ataque">{{ jugador.daño }}</strong></p>
+
+                <p title="Reduce el daño que recibes">🛡️ Defensa <strong id="stat-defensa">{{ jugador.defensa }}</strong></p>
+
+                <p title="Robo de vida">🧛🏻 Robo de Vida <strong id="stat-robo_vida">{{ jugador.robo_vida }}</strong></p>
+
+            </aside>
 
         </div>
 
-    </div>
-
-
-    <!-- BOTÓN PARA EMPEZAR EL COMBATE -->
-    <button id="boton-empezar" onclick="empezarCombate()"
-            style="margin-top: 20px; padding: 10px 20px; background-color: #f5c548; border: none; font-weight: bold; cursor: pointer;">
-        Empezar
-    </button>
-
-    <!-- Botón de prueba (luego se quitará) -->
-    <button onclick="saltarOleadas()"
-            style="margin-top: 20px; padding: 10px 20px;">
-        Saltar 10 oleadas (prueba)
-    </button>
-
-    <!-- EQUIPAMIENTO Y ESTADÍSTICAS -->
-    <div style="background-color: #1b1d2c;
-                border: 1px solid #35394f;
-                width: auto;
-                height: 500px;
-                margin-top: 20px;">
-
-        <div class="panel equipment">
-
-            <h2>EQUIPAMIENTO</h2>
-
-            <div class="equipment-layout">
-
-                <!-- ESPACIO PARA EQUIPAMIENTO -->
-                <div id="equipment-slots"
-                     class="equipment-slots">
-                </div>
-
-
-                <!-- ESTADÍSTICAS -->
-                <div class="stats-box">
-
-                    <h3>ESTADÍSTICAS</h3>
-
-                    <p>
-                        ❤️ Vida
-                        <strong id="stat-vida">
-                            {{ jugador.vida_maxima }}
-                        </strong>
-                    </p>
-
-                    <p title="Daño de cada golpe">
-                        ⚔️ Ataque
-                        <strong id="daño">
-                            {{ jugador.daño }}
-                        </strong>
-                    </p>
-
-                    <p title="Reduce el daño que recibes">
-                        🛡️ Defensa
-                        <strong id="stat-defensa">
-                            {{ jugador.defensa }}
-                        </strong>
-                    </p>
-
-                    <p title="Atacas más rápido">
-                        💨 Velocidad
-                        <strong id="stat-velocidad">
-                            {{ jugador.velocidad }}
-                        </strong>
-                    </p>
-
-                    <p title="Robo de vida">
-                        🧛🏻 Robo de Vida
-                        <strong id="stat-robo_vida">
-                            {{ jugador.robo_vida }}
-                        </strong>
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+    </section>
 
 
 <script>
-    // =====================================================
-    //  DATOS DEL HÉROE (se piden a app.py al abrir la página)
-    // =====================================================
+
+    // ---------- VARIABLES ----------
     let vida = 100;
     let vidaMaxima = 100;
     let danoHeroe = 10;
     let defensaHeroe = 0;
-
-    function cargarJugador() {
-        fetch("/api/jugador")
-            .then(r => r.json())
-            .then(j => {
-                vidaMaxima = j.vida_maxima;
-                vida = j.vida_maxima;
-                danoHeroe = j["daño"];
-                defensaHeroe = j.defensa;
-            });
-    }
-
-    // =====================================================
-    //  DATOS DEL ENEMIGO
-    // =====================================================
-    // Cada tipo dura 10 oleadas. vida = base + extra * (oleada dentro del tramo)
-    let enemigos = [
-        { nombre: "Slime",     imagen: "/static/slime.jpg",     vida: 30,  extra: 5,  altura: 100 },
-        { nombre: "Goblin",    imagen: "/static/goblin.jpg",    vida: 100, extra: 10, altura: 120 },
-        { nombre: "Esqueleto", imagen: "/static/esqueleto.jpg", vida: 200, extra: 20, altura: 140 },
-        { nombre: "Minotauro", imagen: "/static/minotauro.jpg", vida: 400, extra: 40, altura: 180 }
-    ];
+    let roboVidaHeroe = 0;
 
     let oleada = 1;
     let record = 1;
-    let vidaEnemigo = 30;
-    let vidaMaxEnemigo = 30;
 
-    // Interruptor: ¿hay un combate en marcha?
+    let vidaEnemigo = 25;
+    let vidaMaxEnemigo = 25;
+
     let combateActivo = false;
 
 
-    // =====================================================
-    //  PREPARAR AL ENEMIGO
-    // =====================================================
+    // ---------- ENEMIGO (mas fuerte cada oleada) ----------
     function nuevoEnemigo() {
-        let tipo = Math.floor((oleada - 1) / 10);
-        if (tipo > enemigos.length - 1) {
-            tipo = enemigos.length - 1;
-        }
-        let elegido = enemigos[tipo];
-        let posicion = oleada - 1 - tipo * 10;
-
-        let img = document.getElementById("enemigo");
-        img.src = elegido.imagen;
-        img.style.height = elegido.altura + "px";
-
-        // La barra sube o baja según lo alto que sea el enemigo
-        document.getElementById("caja-barra-enemigo").style.bottom = (30 + elegido.altura + 10) + "px";
-
-        vidaMaxEnemigo = elegido.vida + posicion * elegido.extra;
+        vidaMaxEnemigo = 20 + oleada * 5;
         vidaEnemigo = vidaMaxEnemigo;
         document.getElementById("barra-enemigo").style.width = "100%";
     }
 
-    function subirOleada(cantidad) {
-        oleada = oleada + cantidad;
-        if (oleada > record) {
-            record = oleada;
-        }
-        document.getElementById("oleada").textContent = oleada;
-        document.getElementById("record").textContent = record;
-    }
 
-    // Solo para probar los tramos
-    function saltarOleadas() {
-        subirOleada(10);
-        nuevoEnemigo();
-    }
-
-
-    // =====================================================
-    //  ANIMACIÓN DE ATAQUE
-    // =====================================================
-    // El personaje se lanza hacia delante y vuelve a su sitio
+    // ---------- MOVER AL PERSONAJE AL ATACAR ----------
     function atacar(id, distancia) {
         let personaje = document.getElementById(id);
         personaje.style.transform = "translateX(" + distancia + "px)";
@@ -356,24 +147,21 @@
     }
 
 
-    // =====================================================
-    //  EL COMBATE
-    // =====================================================
+    // ---------- EMPEZAR ----------
     function empezarCombate() {
         if (combateActivo) {
             return;
         }
 
-        // Esconder la pantalla de game over (si estaba)
         document.getElementById("pantalla-gameover").style.display = "none";
 
-        // Si venimos de una derrota, se empieza de cero
+        // Si venimos de morir, empezamos de cero
         if (vida <= 0) {
             vida = vidaMaxima;
+            oleada = 1;
             document.getElementById("barra-heroe").style.width = "100%";
             document.getElementById("heroe").style.transform = "rotate(0deg)";
-            oleada = 1;
-            document.getElementById("oleada").textContent = 1;
+            document.getElementById("oleada").textContent = oleada;
             nuevoEnemigo();
         }
 
@@ -382,7 +170,8 @@
         turnoHeroe();
     }
 
-    // TURNO DEL HÉROE
+
+    // ---------- TURNO DEL HEROE ----------
     function turnoHeroe() {
         if (combateActivo == false) {
             return;
@@ -390,7 +179,6 @@
 
         atacar("heroe", 120);
 
-        // El golpe "llega" un poco después de empezar el movimiento
         setTimeout(function () {
             vidaEnemigo = vidaEnemigo - danoHeroe;
             if (vidaEnemigo < 0) {
@@ -401,12 +189,13 @@
             if (vidaEnemigo == 0) {
                 morirEnemigo();
             } else {
-                setTimeout(turnoEnemigo, 900);   // ahora le toca al enemigo
+                setTimeout(turnoEnemigo, 900);
             }
         }, 250);
     }
 
-    // TURNO DEL ENEMIGO
+
+    // ---------- TURNO DEL ENEMIGO ----------
     function turnoEnemigo() {
         if (combateActivo == false) {
             return;
@@ -415,12 +204,10 @@
         atacar("enemigo", -120);
 
         setTimeout(function () {
-            // El enemigo pega más fuerte cada oleada. La defensa reduce el daño.
-            let dano = 3 + oleada * 2 - defensaHeroe;
+            let dano = 3 + oleada * 2 - defensaHeroe;   // la defensa reduce el daño
             if (dano < 1) {
                 dano = 1;
             }
-
             vida = vida - dano;
             if (vida < 0) {
                 vida = 0;
@@ -430,50 +217,48 @@
             if (vida == 0) {
                 morirHeroe();
             } else {
-                setTimeout(turnoHeroe, 900);     // ahora le toca al héroe
+                setTimeout(turnoHeroe, 900);
             }
         }, 250);
     }
 
 
-    // =====================================================
-    //  MORIR
-    // =====================================================
+    // ---------- MUERE EL ENEMIGO ----------
     function morirEnemigo() {
         let enemigo = document.getElementById("enemigo");
-        let caja = document.getElementById("caja-barra-enemigo");
+        let caja = document.getElementById("cajaBarraEnemigo");
 
-        // 1. Se cae
-        enemigo.style.transform = "rotate(90deg)";
+        enemigo.style.transform = "rotate(90deg)";      // se cae
 
-        // 2. Desaparece (él y su barra)
-        setTimeout(function () {
+        setTimeout(function () {                         // desaparece
             enemigo.style.opacity = 0;
             caja.style.opacity = 0;
         }, 600);
 
-        // 3. Se endereza, sube la oleada y reaparece el siguiente
-        setTimeout(function () {
+        setTimeout(function () {                         // reaparece el siguiente
             enemigo.style.transform = "rotate(0deg)";
-            subirOleada(1);
-            nuevoEnemigo();
+            oleada = oleada + 1;
+            if (oleada > record) {
+                record = oleada;
+            }
+            document.getElementById("oleada").textContent = oleada;
+            document.getElementById("record").textContent = record;
 
+            nuevoEnemigo();
             enemigo.style.opacity = 1;
             caja.style.opacity = 1;
 
-            // Y el combate sigue con el siguiente enemigo
             setTimeout(turnoHeroe, 700);
         }, 1800);
     }
 
+
+    // ---------- MUERE EL CABALLERO ----------
     function morirHeroe() {
         combateActivo = false;
         document.getElementById("heroe").style.transform = "rotate(-90deg)";
-
-        // El botón de abajo vuelve a estar disponible
         document.getElementById("boton-empezar").disabled = false;
 
-        // Cuando el caballero ya está en el suelo, sale GAME OVER
         setTimeout(function () {
             document.getElementById("oleada-final").textContent = oleada;
             document.getElementById("pantalla-gameover").style.display = "block";
@@ -481,9 +266,22 @@
     }
 
 
-    // Al abrir la página: se piden los datos del héroe y se prepara el primer enemigo
+    // Pide a app.py los datos del heroe (el equipamiento comprado cambia estas cifras)
+    function cargarJugador() {
+        fetch("/api/jugador")
+            .then(r => r.json())
+            .then(j => {
+                vidaMaxima = j.vida_maxima;
+                vida = j.vida_maxima;
+                danoHeroe = j["daño"];
+                defensaHeroe = j.defensa;
+                document.getElementById("oro").textContent = j.oro;
+            });
+    }
+
     cargarJugador();
     nuevoEnemigo();
+
 </script>
 
 </body>
