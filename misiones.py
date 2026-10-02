@@ -13,6 +13,7 @@ def cargar_misiones(linea_usuario_int):
     mision4_completada_bool = False
     mision5_completada_bool = False
     mision6_completada_bool = False
+    mision7_completada_bool = False
 
     while True: #Jara: bucle para que vuelva al menú de misiones#
 
@@ -577,7 +578,7 @@ def cargar_misiones(linea_usuario_int):
                 
                 #explicación objetivo de la misión y recomensas#
                 print("◆ Misión:")
-                print("   Acierta el número secreto.")
+                print("   Acierta el número secreto (entre 1-20).")
                 print("◆ Recompensa:")
                 print("   ★ Si aciertas → +100 🪙 oro")
                 print()
@@ -585,34 +586,34 @@ def cargar_misiones(linea_usuario_int):
                 print()
                 print("⚠ ¡Cuidado! Tienes 5 intentos.")
 
-                numero_secreto_int = random.randint(1, 21)
+                numero_secreto_int = random.randint(1, 21) #Jara: para que el el número secreto sea un número aleatorio entre el 1 y 20 (20 incluido)#
 
                 contador_int = 0
                 
                 print()
                 print("🔮 Escribe el número secreto: ")
 
-                while contador_int < 5:
+                while contador_int < 5: #Jara: para entrar en un bucle y salir trás 5 intentos#
                     numero_int = int(input())
-                    contador_int = contador_int + 1
+                    contador_int = contador_int + 1 #Jara: para que el contador vaya sumando por intento usado#
 
-                    if numero_int != numero_secreto_int:
-                        if numero_int < numero_secreto_int:
+                    if numero_int != numero_secreto_int: #Jara: en caso de que el número secreto no sea igual aparezca lo siguiente#
+                        if numero_int < numero_secreto_int: #Jara: si el número secreto es mayor que lo indique#
                             print("✗ (╥﹏╥) ¡INCORRECTO! ★")
                             print("⬆️ ¡El número secreto es MAYOR!")
-                        else:
+                        else: #Jara: si el número secreto es menor que lo indique#
                             print("✗ (╥﹏╥) ¡INCORRECTO! ★")
                             print("⬇️ ¡El número secreto es MENOR!")
-                        if contador_int == 5:
+                        if contador_int == 5: #Jara: en caso de no acertar el número secreto y haber usado los 5 intentos que aparezca el siguiente mensaje#
                             print("(×_×) ¡OH, NO! No has conseguido 🪙 monedas en este ejercicio.")
                             print(">>> Pulsa una tecla para volver al menú de misiones <<<")
-                            break
-                    else:
+                            break #Jara: como no has acertado y ya usaste todos los intentos para que salga del bucle#
+                    else: #Jara: en caso de acertar el número secreto aparezca lo siguiente#
                         print("★ (^_^) ¡CORRECTO! ★")
                         print("🎉 ¡Has descubierto el número secreto!")
                         print("🪙 +100 oro")
                         print(">>> Pulsa una tecla para volver al menú de misiones <<<")
-                        break
+                        break #Jara: como acertaste el número para que salga del bucle#
                     mision7_completada_bool = True
                 
             else: #Jara: si en el menu eliges el 7 y ya completaste la misión para que te salga que ya se completó#
