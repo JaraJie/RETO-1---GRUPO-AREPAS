@@ -99,5 +99,6 @@ while numero_seleccion_int != 0:
     elif numero_seleccion_int == 3:
         print("Ajustes de Cuenta. Opcion no disponible por el momento")
         print("PROXIMAMENTE")
+        input("Pulse cualquier tecla para volver al menu principal")
         
 input("Apagando Aplicación...")
