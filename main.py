@@ -39,7 +39,18 @@ else:
     #llama a la funcion de usuario.py y le ejecuta
     linea_usuario_int = iniciar_sesion()
 
+os.system("cls")
 
+ruta_carpeta = os.path.dirname(__file__)
+ruta_usuarios = os.path.join(ruta_carpeta, "usuarios.txt")
+archivo_usuarios = open(ruta_usuarios, "r")
+lineas_usuarios = archivo_usuarios.readlines()
+archivo_usuarios.close()
+datos_usuario = lineas_usuarios[linea_usuario_int].strip().split(",")
+nombre_usuario = datos_usuario[0]
+
+
+print("Bienvenido a Skillia ", nombre_usuario)
 
 #Tras iniciar sesion/crear cuenta, accedemos al menu principal de la app
 numero_seleccion_int = -1
@@ -60,6 +71,9 @@ while numero_seleccion_int != 0:
         numero_seleccion_int = int(input())
         OPCION_MINIMA = 0
         OPCION_MAXIMA = 3
+
+
+
         #Comprobamos si la opcion es valida, si lo es cambia el booleano a false para poder salir del bucle
         if numero_seleccion_int >= OPCION_MINIMA and numero_seleccion_int <= OPCION_MAXIMA:
             numero_no_valido_bool = False
