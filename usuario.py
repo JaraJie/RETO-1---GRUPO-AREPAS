@@ -216,31 +216,17 @@ def ver_personaje(linea_usuario_int):
     print("Nombre: ", lista_datos_usuario_str[0])
     print("Clase: Caballero") #En esta demo, solo existe la clase caballero
     print("Monedas: ", lista_datos_usuario_str[3])
-    print("          _________")
-    print("         /         \\")
-    print("        /           \\")
-    print("       |             |")
-    print("       |    o   o    |")
-    print("       |             |")
-    print("       |      ^      |")
-    print("       |    \\___/    |")
-    print("        \\           /")
-    print("         \\_________/")
-    print("             ||")
-    print("          ___||___")
-    print("         /        \\")
-    print("        /          \\")
-    print("       |            |")
-    print("       |            |")
-    print("      /|            |\\")
-    print("     / |            | \\")
-    print("       |            |")
-    print("       |____________|")
-    print("          |      |")
-    print("          |      |")
-    print("          |      |")
-    print("         /|      |\\")
-    print("        /_|      |_\\")
+
+    if lista_datos_usuario_str[4] == "corona":
+        print()
+    elif lista_datos_usuario_str[4] == "sombrerocopa":
+        print()
+    elif lista_datos_usuario_str[4] == "orejasgato":
+        print()
+    elif lista_datos_usuario_str[4] == "antenas":
+        print()
+
+    #Imprimir personaje basico
 
     #Input final para salir de la funcion cuando
     input("Pulse cualquier tecla para volver al menu principal")
