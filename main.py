@@ -100,5 +100,7 @@ while numero_seleccion_int != 0:
         print("Ajustes de Cuenta. Opcion no disponible por el momento")
         print("PROXIMAMENTE")
         input("Pulse cualquier tecla para volver al menu principal")
-        
+
+    os.system("cls")
+    
 input("Apagando Aplicación...")
