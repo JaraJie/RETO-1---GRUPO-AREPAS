@@ -62,7 +62,7 @@ print()
 print("╭──────────── ✦ ────────────╮")
 print("   (｡•̀ᴗ-)✧ ¡Bienvenido a")
 print("        ★ SKILLIA ★")
-print(nombre_usuario.center(28))
+print(nombre_usuario.center(28)) #Jara:.center() es para centrar el texto y el 28 el ancho total#
 print("╰───────────────────────────╯")
 
 #Tras iniciar sesion/crear cuenta, accedemos al menu principal de la app
