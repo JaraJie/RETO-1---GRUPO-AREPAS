@@ -44,7 +44,7 @@ def cargar_misiones(linea_usuario_int):
                 print("(^_^) Prueba con otro número.")
 
 
-    #PLANTILLA MISIONES#
+        #PLANTILLA MISIONES#
         #Jara: hice una plantilla para cuando selecciones la misión aparezca lo siguiente#
         #if mision_selecionada_int == NÚMERO DE MISIÓN:#
             #print("╔════════════════════════════╗")#

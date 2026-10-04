@@ -126,7 +126,6 @@ while numero_seleccion_int != 0:
         # Llamamos a la función ver_personaje() de usuario.py, donde se encuentra el código 
         #encargado de mostrar los datos del personaje.
         ver_personaje(linea_usuario_int)
-        continue
     elif numero_seleccion_int == 3:
         print()
         print("╔══════════════════════════════════╗")
