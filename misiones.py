@@ -652,7 +652,7 @@ def cargar_misiones(linea_usuario_int):
                 #Visual misión
                 print("╔════════════════════════════╗")
                 print("   ★ MISIÓN 6 SELECCIONADA ★")
-                print("     ENGLISH QUEST")
+                print("         ENGLISH QUEST")
                 print("╚════════════════════════════╝")
                 
                 #Explicación de en que consiste la misión
