@@ -650,14 +650,23 @@ def cargar_misiones(linea_usuario_int):
             
             if mision6_completada_bool == False:
                 #Visual misión
+                print()
                 print("╔════════════════════════════╗")
                 print("   ★ MISIÓN 6 SELECCIONADA ★")
                 print("         ENGLISH QUEST")
                 print("╚════════════════════════════╝")
                 
                 #Explicación de en que consiste la misión
-                print("El objetivo de este ejercicio es acertar la palabra en ingles mediante el ahorcado")
-                print("Para adivinar la palabra secreta tendrás 5 intentos")
+                print("¡PON A PRUEBA TU INGLÉS!")
+                print("◆ Misión:")
+                print(" Adivinar la palabra secreta.")
+                print("◆ Objetivo:")
+                print(" ✓ Descubre la palabra en inglés.")
+                print("◆ Modalidad:")
+                print(" ✓ Juego basado en el ahorcado.")
+                print()
+                print("⚠️ ¡Cuidado! Dispones de 5 intentos.")
+                print("(ง •̀_•́)ง ¡QUE COMIENCE EL DESAFÍO!")
                 
                 #Variable principal y 2 listas con las palabras de la misión
                 intentos_int = 5
@@ -686,7 +695,9 @@ def cargar_misiones(linea_usuario_int):
                 while intentos_int > 0:
                     
                     #Printeamos la palabra a adivinar en español
-                    print("La palabra en español es: ", palabra_castellano_str)
+                    print()
+                    print("🔎 ¡DESCUBRE LA PALABRA!")
+                    print("📖 La palabra en español es: ", palabra_castellano_str)
 
                     #Printeamos como va la palabra a adivinar, si se ha acertado alguna letra saldra en esa posicion, sino saldra _
                     print(palabra_ahorcado_str)
@@ -694,13 +705,16 @@ def cargar_misiones(linea_usuario_int):
                     #Bucle para pedir que el usuario introduzca una nueva letra
                     while True:
                         
-                        print("Introduzca una letra: ")
+                        print("◆ Tu turno:")
+                        print("   ➤ Introduce una letra.")
                         letra_usuario_str = input().lower()
                         
                         #En el caso de que esa letra aparezca en la lista letras_usadas (es decir, ya se haya dicho esa letra), 
                         #el programa nos imprime que ya hemos dicho esa letra y continua en el bucle
                         if letra_usuario_str in letras_usadas_str:
-                            print("Ya has dicho esa letra")
+                            print("⚠️ ¡LETRA REPETIDA!")
+                            print(" ✖ Ya has introducido esa letra.")
+                            print("💡 ¡Prueba con otra!")
                         
                         #En el caso contrario (la letra no se ha dicho antes), salimos del bucle while
                         else:
@@ -723,7 +737,9 @@ def cargar_misiones(linea_usuario_int):
                     
                     #Si no se ha encontrado esa letra en la palabra, nos muestra por pantalla que no esta, y nos resta un intento. En el caso contrario no pasa nada
                     if aciertos_bool == False:
-                        print("La letra '", letra_usuario_str, "' no está en la palabra")
+                        print("✖ ¡LETRA INCORRECTA!")
+                        print("➤ La letra ",letra_usuario_str, " no está en la palabra.")
+                        print("⚠️ ¡Cuidado! Has perdido un intento.")
                         intentos_int -= 1
                     
                     #En el caso de que se hayan acertado la misma cantidad de letras que hay en la palabra, salimos del While (del juego)
@@ -738,13 +754,23 @@ def cargar_misiones(linea_usuario_int):
                 
                 #Si se ha salido del while, por haber acertado la palabra, nos enseña un mensaje de felicidades
                 if letras_acertadas_int == letras_palabra_int:
-                    print("Felicidades, has acertado la palabra.")
-                    print("Has conseguido 50 monedas")
+                    print()
+                    print("🎉 ¡MISIÓN COMPLETADA!")
+                    print("◆ Resultado:") 
+                    print(" ✓ ¡Has acertado la palabra!") 
+                    print("◆ Recompensa:") 
+                    print(" 🪙 +50 monedas de oro") 
+                    print("(ง •̀_•́)ง ¡ENHORABUENA!")
                     monedas_conseguidas_int = 50
                 #En el caso contrario, se ha salido al quedarse sin intentos. Por lo que nos imprime un mensaje de que no se ha logrado acertar la palabra. Y nos enseña cual era la palabra
                 else:
-                    print("No has logrado acertar la palabra.")
-                    print("La palabra era: ", palabra_ingles_str)
+                    print()
+                    print("💀 ¡MISIÓN FALLIDA!")
+                    print("◆ Resultado:")
+                    print(" ✖ No has logrado adivinar la palabra.")
+                    print("◆ Solución:")
+                    print("📖 La palabra era: ", palabra_ingles_str)
+                    print("💡 ¡No te rindas! La próxima vez lo conseguirás.")
                     monedas_conseguidas_int = 0
                 
                 mision6_completada_bool = True
