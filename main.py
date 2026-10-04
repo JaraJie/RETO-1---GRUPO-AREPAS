@@ -62,7 +62,7 @@ print()
 print("╭──────────── ✦ ────────────╮")
 print("   (｡•̀ᴗ-)✧ ¡Bienvenido a")
 print("        ★ SKILLIA ★")
-print("        ", nombre_usuario)
+print(nombre_usuario.center(28))
 print("╰───────────────────────────╯")
 
 #Tras iniciar sesion/crear cuenta, accedemos al menu principal de la app
