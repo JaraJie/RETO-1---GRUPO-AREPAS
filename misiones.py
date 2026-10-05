@@ -1,10 +1,17 @@
+#Maitane: random se utiliza para generar valores aleatorios en algunas misiones
 import random
+
+#Maitane: os se utiliza para obtener la ruta de usuarios.txt y limpiar la consola
 import os
 
 ###############################################
 #### PANEL DE SELECCIÓN MISIONES           ####
 #### AUTOR: Jara                           ####
 ###############################################
+
+# Maitane: Función principal del menú de misiones.
+# Recibe la línea del usuario que ha iniciado sesión para poder actualizar
+# sus monedas en usuarios.txt después de completar una misión.
 def cargar_misiones(linea_usuario_int):
     #Jara: variables para saber si el estado de la misión (completa o incompleta)#
     mision1_completada_bool = False
@@ -86,7 +93,8 @@ def cargar_misiones(linea_usuario_int):
                 
                 print()
             
-                #añadir condiciones para que te de una cantidad de monedas diferentes dependiendo de la cantidad de fruta que has comido#
+                # Dependiendo de la cantidad de frutas introducida,
+                # asignamos una recompensa diferente al usuario
                 if frutas_int >= 5:
                     print("╔══════════════════════════════╗")
                     print("    (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ ¡PERFECTO!")
@@ -162,7 +170,8 @@ def cargar_misiones(linea_usuario_int):
                 print()
                 
                 #aquí empieza el primer ejercicio#
-                #variables#
+                # El contador controla los intentos disponibles y el booleano
+                # guarda si el usuario ha acertado el ejercicio
                 contador_int = 0
                 respuesta1_bool = False
                 
@@ -336,6 +345,8 @@ def cargar_misiones(linea_usuario_int):
                 print()
                 print("━━━━━━━━━━━━ 📖 ━━━━━━━━━━━━")
 
+                # Dependiendo del tiempo que haya estudiado el usuario,
+                # asignamos una cantidad diferente de monedas como recompensa
                 if tiempomisionestudio_int <= 14:
                     print("(×_×) ¡OH, NO!")
                     print("📚 Has estudiado muy poco.")
@@ -366,7 +377,6 @@ def cargar_misiones(linea_usuario_int):
                     print("🪙 RECOMPENSA: +100 ORO")
                     print(">>> Pulsa una tecla para volver al menú de misiones <<<")
                     monedas_conseguidas_int = 100
-                # En estas comprobaciones le pedimos la usuario cuantos minutos ha estudiado, dependiendo del tiempo se le dan mas o menos monedas.
                 mision3_completada_bool = True
 
             else: #Jara: si en el menu eliges el 3 y ya completaste la misión para que te salga que ya se completó#
@@ -493,7 +503,10 @@ def cargar_misiones(linea_usuario_int):
                     print("★ (^_^) ¡CORRECTO! +10 🪙 ★")
                 else:
                     print("✗ (╥﹏╥) ¡INCORRECTO! ★")
-                
+
+                # En Python, True equivale a 1 y False a 0 al realizar operaciones.
+                # Sumamos los booleanos para obtener el número de respuestas correctas
+                # y multiplicamos por 10 porque cada acierto recompensa con 10 monedas.
                 monedas_totales_int = (respuesta1_bool + respuesta2_bool + respuesta3_bool + respuesta4_bool + respuesta5_bool) * 10 #Jara: para que sume la cantidad de respuestas correctas. La multipicación se debe a que una respuesta correcta equivale a 10 monedas#
                 monedas_conseguidas_int = monedas_totales_int
                 print()
@@ -828,7 +841,7 @@ def cargar_misiones(linea_usuario_int):
                 print()
                 print("⚠ ¡Cuidado! Tienes 5 intentos.")
 
-                numero_secreto_int = random.randint(1, 31) #Jara: para que el el número secreto sea un número aleatorio entre el 1 y 20 (20 incluido)#
+                numero_secreto_int = random.randint(1, 31) #Jara: para que el el número secreto sea un número aleatorio entre el 1 y 30 (30 incluido)#
 
                 contador_int = 0
                 
@@ -905,6 +918,8 @@ def cargar_misiones(linea_usuario_int):
             archivo_usuarios.close()
 
 
-        #Input final para que no se cierre el programa
+        # Esperamos a que el usuario pulse una tecla antes de volver al menú de misiones
         input()
+
+        # Limpiamos la consola antes de mostrar nuevamente el menú
         os.system("cls")
