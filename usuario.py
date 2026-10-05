@@ -11,6 +11,10 @@
 import os
 
 #Aqui, definimos que hacen las funciones llamadas en main.py
+
+# Función encargada de crear una nueva cuenta.
+# Guarda los datos del usuario en usuarios.txt y devuelve el número de línea
+# donde se ha almacenado para que main.py pueda identificar al usuario.
 def crear_cuenta():
     
     # __file__ contiene la ruta donde se encuentra usuario.py.
@@ -84,6 +88,8 @@ def crear_cuenta():
     print()
     print("◆ ¿Quieres añadirle un sombrero? (sí/no) → ")
     anadir_sombrero_str = input().lower()
+    # Convertimos la respuesta del usuario a un booleano:
+    # será True si ha escrito "si" o "sí", y False en cualquier otro caso
     anadir_sombrero_bool = anadir_sombrero_str == "si" or anadir_sombrero_str == "sí"
     seleccion_sombrero_int = 0
 
@@ -103,6 +109,7 @@ def crear_cuenta():
             print()
             print("   ➤ Elige tu accesorio: ")
             seleccion_sombrero_int = int(input())
+            # Comprobamos que la opción introducida corresponda a uno de los accesorios disponibles
             if seleccion_sombrero_int >= 0 and seleccion_sombrero_int <= 4:
                 break
             print()
@@ -159,7 +166,9 @@ def crear_cuenta():
     
  
 
-#Funcion Iniciar Sesion 
+# Función encargada de iniciar sesión.
+# Primero comprueba que el correo exista y después verifica la contraseña.
+# Finalmente devuelve la línea de usuarios.txt donde se encuentra el usuario.
 def iniciar_sesion():
     
     #Como esta explicado en crear cuenta, usamos estas 2 primeras lineas para buscar la ruta del archivo para poder acceder a usuarios.txt
@@ -236,6 +245,9 @@ def ver_personaje(linea_usuario_int):
     #Creamos una variable contador para saber en que linea tenemos que buscar los datos, comparandola
     #con el numero de linea de inicio de sesion o la creacion de cuenta
     contador_int = 0
+    # Recorremos usuarios.txt línea por línea utilizando un contador.
+    # Cuando el contador coincide con la línea del usuario que ha iniciado sesión,
+    # guardamos sus datos en una lista y dejamos de recorrer el archivo.
     for linea in archivo_usuarios:
         #Si coincide con el numero de linea que teniamos antes, cogemos esos datos y los guardamos en una lista
         if contador_int == linea_usuario_int:
@@ -328,5 +340,5 @@ def ver_personaje(linea_usuario_int):
     print("              ⠈⠛⠛⠛⠛⠛⠛⠛⠛⠋  ⠙⠛⠛⠛⠛⠛⠛⠛⠋")
 
 
-    #Input final para salir de la funcion cuando
+    # Esperamos a que el usuario pulse una tecla antes de volver al menú principal
     input("   ➤ Pulsa cualquier tecla para volver al menú principal...")
