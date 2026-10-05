@@ -589,6 +589,7 @@ def cargar_misiones(linea_usuario_int):
                     print("╰───────────────────────────────────╯")
                     print()
                     print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+                    monedas_conseguidas_int = 10
                 elif resultado_int == 2:
                     print("╭────────── ✦ RESULTADOS ✦ ──────────╮")
                     print("       🧹 PROGRESO DE LA MISIÓN")
@@ -598,6 +599,7 @@ def cargar_misiones(linea_usuario_int):
                     print("╰───────────────────────────────────╯")
                     print()
                     print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+                    monedas_conseguidas_int = 20
                 elif resultado_int == 3:
                     print("╭────────── ✦ RESULTADOS ✦ ──────────╮")
                     print("       🧹 PROGRESO DE LA MISIÓN")
@@ -607,6 +609,7 @@ def cargar_misiones(linea_usuario_int):
                     print("╰───────────────────────────────────╯")
                     print()
                     print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+                    monedas_conseguidas_int = 30
                 elif resultado_int == 4:
                     print("╭────────── ✦ RESULTADOS ✦ ──────────╮")
                     print("       🧹 PROGRESO DE LA MISIÓN")
@@ -616,6 +619,7 @@ def cargar_misiones(linea_usuario_int):
                     print("╰───────────────────────────────────╯")
                     print()
                     print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+                    monedas_conseguidas_int = 40
                 elif resultado_int == 5:
                     print("╭────────── ✦ RESULTADOS ✦ ──────────╮")
                     print("       🧹 PROGRESO DE LA MISIÓN")
@@ -625,6 +629,7 @@ def cargar_misiones(linea_usuario_int):
                     print("╰───────────────────────────────────╯")
                     print()
                     print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+                    monedas_conseguidas_int = 50
                 else:
                     print("╔══════════════════════════════════╗")
                     print("       ⚠️ MISIÓN FALLIDA")
@@ -637,6 +642,7 @@ def cargar_misiones(linea_usuario_int):
                     print("   (ง •̀_•́)ง ¡No te rindas!")
                     print()
                     print(">>> Pulsa una tecla para volver al menú de misiones <<<")
+                    monedas_conseguidas_int = 0
                 mision5_completada_bool = True #Jara: para que la misión se guarde como completada una vez hecha#
             else: #Jara: para que si vuelves a seleccionar una misión ya hecha aparezca lo siguiente#
                 print("╔══════════════════════════════╗")
