@@ -340,22 +340,27 @@ def cargar_misiones(linea_usuario_int):
                     print("(×_×) ¡OH, NO!")
                     print("📚 Has estudiado muy poco.")
                     print("🪙 RECOMPENSA: +0 ORO")
+                    monedas_conseguidas_int = 0
                 elif 31 > tiempomisionestudio_int > 14:
                     print("(^_^) ¡BIEN HECHO!")
                     print("📚 ¡Has conseguido estudiar!")
                     print("🪙 RECOMPENSA: +50 ORO")
+                    monedas_conseguidas_int = 50
                 elif 46 > tiempomisionestudio_int > 30:
                     print("(ง •̀_•́)ง ¡MUY BIEN!")
                     print("📚 ¡Buen esfuerzo de estudio!")
                     print("🪙 RECOMPENSA: +75 ORO")
+                    monedas_conseguidas_int = 75
                 elif 61 > tiempomisionestudio_int > 45:
                     print("★ (^▽^) ¡EXCELENTE! ★")
                     print("📚 ¡Has dado lo mejor de ti!")
                     print("🪙 RECOMPENSA: +100 ORO")
+                    monedas_conseguidas_int = 100
                 else:
                     print("★ (^▽^) ¡EXCELENTE! ★")
                     print("💤 ¡Pero recuerda hacer descansos")
                     print("🪙 RECOMPENSA: +100 ORO")
+                    monedas_conseguidas_int = 100
                 # En estas comprobaciones le pedimos la usuario cuantos minutos ha estudiado, dependiendo del tiempo se le dan mas o menos monedas.
                 mision3_completada_bool = True
 
