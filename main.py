@@ -107,6 +107,7 @@ while numero_seleccion_int != 0:
         OPCION_MINIMA = 0
         OPCION_MAXIMA = 3
 
+        #Limpiamos la concola
         os.system("cls")
 
         #Comprobamos si la opcion es valida, si lo es cambia el booleano a false para poder salir del bucle
@@ -156,6 +157,8 @@ while numero_seleccion_int != 0:
         print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
         input("   ➤ Pulsa ENTER para volver al menú...")
 
+    # Limpiamos la consola después de ejecutar la opción seleccionada para volver al menu principal
     os.system("cls")
-    
+
+#Esperamos a que el usuario pulse Enter para cerrar del todo el programa
 input("Apagando Skillia...")
