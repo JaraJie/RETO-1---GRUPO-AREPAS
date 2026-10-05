@@ -47,22 +47,34 @@ else:
     #llama a la funcion de usuario.py y le ejecuta
     linea_usuario_int = iniciar_sesion()
 
+
+#Este comando sirve para limpiar la pantalla de la terminal y borrar todo el texto antiguo
 os.system("cls")
 
+#Para personalizar la experiencia, tras iniciar sesion o crear cuenta, vamos a hacer que el programa
+#nos de la bienvenida con el nombre de usuario. Para eso, vamos a tener que abrir el archivo usuarios.txt
+#y buscar el nombre
 ruta_carpeta = os.path.dirname(__file__)
 ruta_usuarios = os.path.join(ruta_carpeta, "usuarios.txt")
+#Abrimos el archivo .txt en modo lectura ("r")
 archivo_usuarios = open(ruta_usuarios, "r")
+#Leemos todo el archivo, y guardamos todas sus lineas en una lista
 lineas_usuarios = archivo_usuarios.readlines()
+#Una vez que tenemos todas las lineas leidas y guardadas en una lista, podemos cerrar el .txt
 archivo_usuarios.close()
+#Accedemos a la informacion del usuario registrado o que haya iniciado sesion con la variable
+#linea_usuario, que es la que nos devolvia la funcion de inciar sesion o crear cuenta, la cual contiene
+#el numero de linea donde estan los datos en el .txt
 datos_usuario = lineas_usuarios[linea_usuario_int].strip().split(",")
-nombre_usuario = datos_usuario[0]
+#Guardamos en una variable el nombre del usuario
+nombre_usuario_str = datos_usuario[0]
 
-
+#Finlamente, imprimimos el mensaje de bienvenida con el nombre
 print()
 print("╭──────────── ✦ ────────────╮")
 print("   (｡•̀ᴗ-)✧ ¡Bienvenido a")
 print("        ★ SKILLIA ★")
-print(nombre_usuario.center(28)) #Jara:.center() es para centrar el texto y el 28 el ancho total#
+print(nombre_usuario_str.center(28)) #Jara:.center() es para centrar el texto y el 28 el ancho total#
 print("╰───────────────────────────╯")
 
 #Tras iniciar sesion/crear cuenta, accedemos al menu principal de la app
