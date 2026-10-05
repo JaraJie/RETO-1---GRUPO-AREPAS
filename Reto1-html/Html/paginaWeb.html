@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillia</title>
+    <link rel="stylesheet" href="../Estatico/estilos.css">
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+    <header class="cabecera">
+
+        <h1 class="nombreApp">SKILLIA</h1>
+
+        <div class="espacio"></div>
+
+        <div class="marcador">
+            <p>Oro</p>
+            <p>0</p>
+        </div>
+
+        <div class="marcador">
+            <p>Oleada</p>
+            <p>1</p>
+        </div>
+
+        <div class="marcador">
+            <p>Record</p>
+            <p>1</p>
+        </div>
+
+    </header>
+
+
+    <!-- ZONA PRINCIPAL -->
+    <main class="zonaPrincipal">
+
+        <!-- PERFIL DEL JUGADOR -->
+        <aside class="perfil">
+            <img class="fotoPerfil" src="https://res.cloudinary.com/wkmd7ohe/image/upload/v1791193661/fotoPerfil.png">
+            <p class="nombreJugador">NOMBRE</p>
+        </aside>
+
+        <!-- CUADRO DEL COMBATE -->
+        <section class="cuadroCombate">
+
+            <img class="fondo" src="https://res.cloudinary.com/wkmd7ohe/image/upload/v1791194696/Fondo.png">
+
+            <img id="heroe" class="personaje" src="https://res.cloudinary.com/wkmd7ohe/image/upload/v1791194696/caballero.png">
+
+            <img id="enemigo" class="personaje" src="https://res.cloudinary.com/wkmd7ohe/image/upload/v1791194696/goblin.png">
+
+            <div id="cajaBarraHeroe" class="barra">
+                <div class="relleno verde"></div>
+            </div>
+
+            <div id="cajaBarraEnemigo" class="barra">
+                <div class="relleno rojo"></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <button class="boton botonEmpezar">Empezar</button>
+
+
+    <!-- EQUIPAMIENTO Y ESTADISTICAS -->
+    <section class="panelEquipamiento">
+
+        <h2>EQUIPAMIENTO</h2>
+
+        <div class="contenidoEquipamiento">
+
+            <img class="equipamiento" src="https://res.cloudinary.com/wkmd7ohe/image/upload/v1791194696/inventario.png">
+
+            <aside class="estadisticas">
+
+                <h3>ESTADISTICAS</h3>
+
+                <p>❤️ Vida <strong>100</strong></p>
+
+                <p title="Daño de cada golpe">⚔️ Ataque <strong>10</strong></p>
+
+                <p title="Reduce el daño que recibes">🛡️ Defensa <strong>0</strong></p>
+
+                <p title="Robo de vida">🧛🏻 Robo de Vida <strong>0</strong></p>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
