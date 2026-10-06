@@ -1,4 +1,14 @@
+import os
+
 def cargar_tienda(linea_usuario_int)
+
+    ruta_carpeta = os.path.dirname(__file__)
+    ruta_usuarios = os.path.join(ruta_carpeta, "usuarios.txt")
+    archivo_usuarios = open(ruta_usuarios, "r")
+    lineas_usuarios = archivo_usuarios.readlines()
+    archivo_usuarios.close()
+    datos_usuario = lineas_usuarios[linea_usuario_int].strip().split(",")
+    monedas_usuario_str = datos_usuario[3]
 
     print()
     print("              ⚜ MERCADO DE AVENTUREROS ⚜")
@@ -38,5 +48,5 @@ def cargar_tienda(linea_usuario_int)
     print("        🪙 400 monedas")
     print()
     print()
-    print("        💰 Monedas Totales:")
+    print("        💰 Monedas Totales: ", monedas_usuario_str)
     print("        ❯ ¿Qué deseas comprar?")
