@@ -1,5 +1,6 @@
-MONEDAS USUARIO_INT = 1500
-
+monedas_usuario_int = 1500
+dragon_comprado_bool = False
+gatomagico_comprado_bool = False
  
 while True:
     print()
@@ -231,3 +232,12 @@ while True:
             print("             ✧ Tu compañero te espera ✧")
             print()
             input()
+
+    elif compra_seleccionada_int == 0:
+        print()
+        print("        ⚜ HAS SALIDO DE LA TIENDA ⚜")
+        print("        Gracias por visitar el Mercado de Aventureros.")
+        print()
+        break
+
+input("Saliendo de la tienda...")
