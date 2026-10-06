@@ -1,4 +1,4 @@
-monedas_usuario_int = 1500
+MONEDAS USUARIO_INT = 1500
 
  
 while True:
