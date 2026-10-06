@@ -5,4 +5,4 @@ Maitane,m.esnaola04@gmail.com,1234,480,vacio
 2,2,2,0,sombrerocopa
 3,3,3,0,cuernos
 4,4,4,0,antenas
-,,,0,vacio
+,,,0,vacio,5,5,0,vacio
