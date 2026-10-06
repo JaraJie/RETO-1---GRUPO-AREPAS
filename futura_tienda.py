@@ -58,3 +58,55 @@ while True:
             print("        ❯ Pulsa cualquier tecla para volver a la tienda...")
             print()
             input()
+
+    #TIENDA DE OBJETOS#
+
+    if compra_seleccionada_int in (1, 3, 4):
+        print()
+        print("                 ✦ ¡AVISO! ✦")
+        print()
+        print("        « El objeto seleccionado aún")
+        print("          no está disponible. »")
+        print()
+        print("        🔒 Este objeto permanece bloqueado")
+        print("           hasta nuevo aviso...")
+        print()
+        print("                 ✧ ✧ ✧")
+        print("        ❯ Regresa cuando esté disponible.")
+        print()
+        input()
+
+
+    elif compra_seleccionada_int == 2:
+        
+        if monedas_usuario_int >= 200:
+
+            monedas_usuario_int = monedas_usuario_int - 200
+        
+            print()
+            print("              ⚜ COMPRA REALIZADA ⚜")
+            print()
+            print("        ✦ El objeto ha sido adquirido ✦")
+            print()
+            print("        ⚔️  Espada del Guerrero")
+            print("        « El acero habla por quien sabe usarlo »")
+            print()
+            print("        💰 Monedas restantes:", monedas_usuario_int)
+            print()
+            print("              ⚔ ¡Buena suerte, aventurero! ⚔")
+            print()
+            print()
+            print("""
+                                        /
+                                *//////{<>==================-
+                                        \\
+            """)
+            print("             ⚔ ¡OBJETO ADQUIRIDO! ⚔")
+            print()
+            input()
+            
+        else:
+            print()
+            print("        ❌ No tienes suficientes monedas.")
+            print()
+            input()
