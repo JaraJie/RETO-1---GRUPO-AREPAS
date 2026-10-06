@@ -2,12 +2,18 @@ import os
 
 def cargar_tienda(linea_usuario_int)
 
+    #Buscamos la dirección donde se encuentra usuarios.txt
     ruta_carpeta = os.path.dirname(__file__)
     ruta_usuarios = os.path.join(ruta_carpeta, "usuarios.txt")
+    #Abrimos el archivo en modo lectura
     archivo_usuarios = open(ruta_usuarios, "r")
+    #Guardamos todas las lineas en una lista de lineas usuarios
     lineas_usuarios = archivo_usuarios.readlines()
+    #Tras leer y guardar todas las lineas, cerramos el archivo
     archivo_usuarios.close()
+    #Guardamos solo la informacion de la linea donde se encuentra el usuario
     datos_usuario = lineas_usuarios[linea_usuario_int].strip().split(",")
+    #Guardamos solo el dato de las monedas que tiene el usuario
     monedas_usuario_str = datos_usuario[3]
 
     print()
