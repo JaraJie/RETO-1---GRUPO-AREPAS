@@ -1,21 +1,7 @@
-import os
+monedas_usuario_int = 1500
 
-def cargar_tienda(linea_usuario_int)
-
-    #Buscamos la dirección donde se encuentra usuarios.txt
-    ruta_carpeta = os.path.dirname(__file__)
-    ruta_usuarios = os.path.join(ruta_carpeta, "usuarios.txt")
-    #Abrimos el archivo en modo lectura
-    archivo_usuarios = open(ruta_usuarios, "r")
-    #Guardamos todas las lineas en una lista de lineas usuarios
-    lineas_usuarios = archivo_usuarios.readlines()
-    #Tras leer y guardar todas las lineas, cerramos el archivo
-    archivo_usuarios.close()
-    #Guardamos solo la informacion de la linea donde se encuentra el usuario
-    datos_usuario = lineas_usuarios[linea_usuario_int].strip().split(",")
-    #Guardamos solo el dato de las monedas que tiene el usuario
-    monedas_usuario_str = datos_usuario[3]
-
+ 
+while True:
     print()
     print("              ⚜ MERCADO DE AVENTUREROS ⚜")
     print()
@@ -53,6 +39,22 @@ def cargar_tienda(linea_usuario_int)
     print("        « Una criatura misteriosa que trae buena fortuna »")
     print("        🪙 400 monedas")
     print()
+    print("    > 00 🚪  Salir de la tienda")
+    print("        « Volverás cuando necesites algo »")
     print()
-    print("        💰 Monedas Totales: ", monedas_usuario_str)
+    print("        💰 Monedas Totales: ", monedas_usuario_int)
     print("        ❯ ¿Qué deseas comprar?")
+
+    while True:
+
+        compra_seleccionada_int = int(input())
+        
+        if 0 <= compra_seleccionada_int <= 7:
+            break
+        else:
+            print()
+            print("              ⚠ OPCIÓN NO DISPONIBLE ⚠")
+            print()
+            print("        ❯ Pulsa cualquier tecla para volver a la tienda...")
+            print()
+            input()
