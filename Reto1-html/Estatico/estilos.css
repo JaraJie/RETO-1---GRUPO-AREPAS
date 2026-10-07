@@ -304,3 +304,10 @@ lo tenía así:
     text-shadow: 2px 2px 5px black;
 }
 
+.secciones p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #dddddd;
+    margin: 0 auto;
+    max-width: 700px;
+}
