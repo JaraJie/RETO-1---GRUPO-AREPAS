@@ -296,3 +296,11 @@ lo tenía así:
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.secciones h3 {
+    font-size: 35px;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+    color: #9b8cff;
+    text-shadow: 2px 2px 5px black;
+}
+
