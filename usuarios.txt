@@ -1,7 +1,7 @@
 Prueba,prueba@gmail.com,1234,0,corona
 Maitane,m.esnaola04@gmail.com,1234,480,vacio
 0,0,0,0,vacio
-1,1,1,670,corona
+1,1,1,790,corona
 2,2,2,0,sombrerocopa
 3,3,3,0,cuernos
 4,4,4,0,antenas
