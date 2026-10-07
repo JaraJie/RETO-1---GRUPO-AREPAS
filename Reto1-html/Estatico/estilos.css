@@ -200,55 +200,36 @@ body {
 }
 
 /* PAGINA DE INICIO ---------- */
-.paginaInicio {
-    background-color: #1b1d2c;
-    border: 1px solid #35394f;
-    padding: 30px 40px;
-    min-height: calc(100vh - 42px);
-    box-sizing: border-box;
+
+.logoSkillia {
+    width: 200px;
+    height: auto;
+}
+
+.headerInicio {
+    height: 80px;
+    background-color: #0d0b24;
+
     display: flex;
-    flex-direction: column;
-    gap: 25px;
+    align-items: center;
+
+    padding: 0 50px;
+
+    position: relative;
 }
 
-.tituloInicio {
-    text-align: center;
-    color: #ffd900;
-    font-size: 70px;
-    letter-spacing: 6px;
-    margin: 0;
-}
+.navInicioBuscador {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 
-.menu {
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    gap: 30px;
 }
 
-.menu a {
-    background-color: #242739;
-    border: 2px solid #4a4f7a;
-    border-radius: 6px;
-    color: #ffd900;
+.navInicioBuscador a {
+    color: white;
     text-decoration: none;
-    font-size: 22px;
-    font-weight: bold;
-    padding: 14px 50px;
-    min-width: 220px;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-.menu a:hover {
-    background-color: #ffd900;
-    color: #10111b;
-    border-color: #ffd900;
-}
-
-.cuadroTexto {
-    flex: 1;
-    background-color: #242739;
-    border: 1px solid #35394f;
-    padding: 30px;
-    font-size: 20px;
+    font-family: monospace;
+    font-size: 24px;
 }
