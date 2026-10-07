@@ -198,3 +198,57 @@ body {
 .estadisticas h3 {
     margin-top: 0;
 }
+
+/* PAGINA DE INICIO ---------- */
+.paginaInicio {
+    background-color: #1b1d2c;
+    border: 1px solid #35394f;
+    padding: 30px 40px;
+    min-height: calc(100vh - 42px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.tituloInicio {
+    text-align: center;
+    color: #ffd900;
+    font-size: 70px;
+    letter-spacing: 6px;
+    margin: 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.menu a {
+    background-color: #242739;
+    border: 2px solid #4a4f7a;
+    border-radius: 6px;
+    color: #ffd900;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 14px 50px;
+    min-width: 220px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.menu a:hover {
+    background-color: #ffd900;
+    color: #10111b;
+    border-color: #ffd900;
+}
+
+.cuadroTexto {
+    flex: 1;
+    background-color: #242739;
+    border: 1px solid #35394f;
+    padding: 30px;
+    font-size: 20px;
+}
