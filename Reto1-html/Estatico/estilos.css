@@ -240,15 +240,18 @@ lo tenía así:
 /* CSS DE LA PORTADA INICIO */
 
 .portadaInicio {
+    position: relative;
     width: 100%;
-    height: 250px;
+    height: 500px;
 }
 
 /* IMAGEN */
 
-.portadaInicio {
+.fondoInicioSkillia {
     width: 100%;
-    height: 500px;
+    height: 100%;
+    object-fit: cover; /*para que ocupe todo el espacio*/
+    object-position: center;
 }
 
 .textoPortada {
