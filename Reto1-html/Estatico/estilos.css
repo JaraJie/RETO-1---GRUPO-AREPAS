@@ -211,6 +211,33 @@ body {
     height: auto;
 }
 
+/*COMPARACIÓN CON LA IA: EN ESTA PARTE DEL HEADER ME DICE QUE EN PANTALLA PEQUEÑA PUEDE DAR PROBLEMAS
+ESTA ES LA SOLUCIÓN QUE ME HA DADO:
+@media (max-width: 800px) {
+    .headerInicio {
+        height: auto;
+        min-height: 80px;
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logoSkillia {
+        width: 150px;
+    }
+
+    .navInicioBuscador {
+        position: static;
+        transform: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .navInicioBuscador a {
+        font-size: 18px;
+    }*/
+
 .headerInicio { /*class general header*/
     height: 80px;
     background-color: #0d0b24;
@@ -220,11 +247,15 @@ body {
     padding: 0 50px;
 }
 
+
+/*COMPARACIÓN CON LA IA: EN ESTA PARTE DEL BUSCADOR ME DICE QUE EN PANTALLA PEQUEÑA PUEDE DAR PROBLEMAS*/
+
 /*Jara: busqué esta parte en internet porque al inicio no estaba completamente centrado,
 lo tenía así:
 .navInicioBuscador {
     display: flex;
     align-items: center;*/
+    
 .navInicioBuscador { /*class general buscador*/
     position: absolute;
     left: 50%;
@@ -232,6 +263,19 @@ lo tenía así:
     display: flex;
     gap: 30px;
 }
+
+/*COMPARACIÓN CON LA IA: ME RECOMIENDA USAR hover
+.navInicioBuscador a {
+    color: white;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 24px;
+    transition: color 0.2s ease;
+}
+
+.navInicioBuscador a:hover {
+    color: #9b8cff;
+}*/
 
 .navInicioBuscador a { /*class para los links*/
     color: white;
@@ -269,12 +313,32 @@ lo tenía así:
     text-shadow: 2px 2px 8px black;
 }
 
+/*COMPARACIÓN CON LA IA: EN ESTA PARTE DEL PORTADA ME DICE QUE EN PANTALLA PEQUEÑA PUEDE DAR PROBLEMAS
+ESTA ES LA SOLUCIÓN QUE ME HA DADO:
+.textoPortada h1 {
+    font-size: clamp(50px, 10vw, 100px);
+    margin: 8px 0 0;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 8px black;
+}
+
+.textoPortada h2 {
+    font-size: clamp(25px, 5vw, 50px);
+    margin: 0;
+}
+
+.textoPortada p {
+    font-size: clamp(14px, 2vw, 20px);
+    margin: 0;
+}*/
+
 .textoPortada h1 {
     font-size: 100px;
     margin: 8px 0 0;
     font-weight: bold;
     letter-spacing: 5px;
-    text-shadow: 2px 2px 8px black,
+    text-shadow: 2px 2px 8px black;
 }
 
 .textoPortada h2 {
@@ -358,6 +422,17 @@ lo tenía así:
 .footerColumna a:hover {
     color: #9b8cff;
 }
+
+/* COMPARACIÓN CON LA IA: ME RECOMIENDA USAR ESTO EN EL .footerCopyright
+.footerCopyright {
+    flex-basis: 100%;
+    text-align: center;
+    border-top: 1px solid #28234f;
+    margin-top: 30px;
+    padding-top: 15px;
+    color: #77758a;
+    font-size: 14px;
+} */
 
 /* COPYRIGHT */
 .footerCopyright {
