@@ -199,9 +199,9 @@ body {
     margin-top: 0;
 }
 
-/* PAGINA DE INICIO ---------- */
+/* PAGINA DE INICIO Jara y Maitane---------- */
 
-/*CSS de Header*/
+/*CSS de Header - Jara*/
 .logoSkillia { /*class del logo*/
     /*Jara: la imagen del logo era muy grande por lo que tuve que hacerla más pequeña*/
     width: 200px;
@@ -237,7 +237,7 @@ lo tenía así:
     font-size: 24px;
 }
 
-/* CSS DE LA PORTADA INICIO */
+/* CSS DE LA PORTADA INICIO - Maitane */
 
 .portadaInicio {
     position: relative;
@@ -284,7 +284,7 @@ lo tenía así:
     margin: 0;
 }
 
-/*CSS de Secciones*/
+/*CSS de Secciones - Jara*/
 
 .secciones {
     min-height: 300px;
@@ -312,6 +312,7 @@ lo tenía así:
     max-width: 700px;
 }
 
+/*CSS de footer - Maitane*/
 .footerFinal {
     
 }
