@@ -316,8 +316,60 @@ lo tenía así:
 }
 
 /*CSS de footer - Maitane*/
+/* CSS DE FOOTER - MAITANE */
 .footerFinal {
-    
+    background-color: #090817;
+    color: #dddddd;
+    font-family: monospace;
+    padding: 35px 120px 15px;
+    /*Css para separar el footer en 3 columnas*/
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-top: 1px solid #28234f;
+}
+
+/* COLUMNAS DEL FOOTER */
+.footerColumna {
+    width: 220px;
+    font-size: 16px;
+}
+.footerColumna p {
+    line-height: 1.6;
+    margin: 4px 0;
+}
+
+/* TÍTULOS DEL FOOTER */
+.tituloFooter {
+    color: #9b8cff;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+/* ENLACE A GITHUB */
+.footerColumna a {
+    color: #dddddd;
+    text-decoration: none;
+}
+
+/*Cuando el raton se mantiene sobre el enlace cambia de color a morado*/
+.footerColumna a:hover {
+    color: #9b8cff;
+}
+
+/* COPYRIGHT */
+.footerCopyright {
+    width: 100%;
+    text-align: center;
+
+    border-top: 1px solid #28234f;
+    margin-top: 30px;
+    padding-top: 15px;
+
+    color: #77758a;
+    font-size: 14px;
 }
 
 
