@@ -201,14 +201,14 @@ body {
 
 /* PAGINA DE INICIO ---------- */
 
-/*Css de Header*/
-.logoSkillia { 
+/*CSS de Header*/
+.logoSkillia { /*class del logo*/
     /*Jara: la imagen del logo era muy grande por lo que tuve que hacerla más pequeña*/
     width: 200px;
     height: auto;
 }
 
-.headerInicio {
+.headerInicio { /*class general header*/
     height: 80px;
     background-color: #0d0b24;
     /*Jara: tuve que buscar en internet esta parte,sirve para meter los elementos dentro de una flexbox*/
@@ -222,7 +222,7 @@ lo tenía así:
 .navInicioBuscador {
     display: flex;
     align-items: center;*/
-.navInicioBuscador {
+.navInicioBuscador { /*class general buscador*/
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -230,7 +230,7 @@ lo tenía así:
     gap: 30px;
 }
 
-.navInicioBuscador a {
+.navInicioBuscador a { /*class para los links*/
     color: white;
     text-decoration: none;
     font-family: monospace;
