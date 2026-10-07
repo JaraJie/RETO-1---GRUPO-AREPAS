@@ -283,3 +283,16 @@ lo tenía así:
     font-size: 20px;
     margin: 0;
 }
+
+/*CSS de Secciones*/
+
+.secciones {
+    min-height: 300px;
+    padding: 70px 20px;
+    text-align: center;
+    background-color: #100d2b;
+    color: white;
+    font-family: monospace;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
