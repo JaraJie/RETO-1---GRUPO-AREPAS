@@ -506,5 +506,73 @@ ESTA ES LA SOLUCIÓN QUE ME HA DADO:
 }
 
 
-
 /* FICHA PERSONAJE UHAITZ---------- */
+
+.bodypersonaje {
+    background: #0e0f18;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* TÍTULO */
+.h1personaje {
+    background: #202235;
+    color: #ffd500;
+    padding: 20px 30px;
+    width: fit-content;
+    min-width: 300px;
+    font-family: "Press Start 2P", monospace;
+    font-size: 40px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* contenedor */
+.contenedorpersonaje {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* caballero */
+.imagenpersonaje {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personajepersonaje {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+/* descripccion */
+.informacionpersonaje {
+    max-width: 400px;
+}
+
+.personajep {
+    font-size: 20px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* texto futuro */
+.coming {
+    font-family: "Press Start 2P", monospace;
+    color: #ffd500;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
