@@ -12,3 +12,4 @@ Más personajes y enemigos. Añadir nuevos héroes en la página de Characters y
 Ranking real. Que el ranking se actualice con las partidas de los jugadores y destaque a los tres primeros con oro, plata y bronce.
 Guardar el progreso. Que el jugador pueda poner su nombre y no pierda su oro y su récord al cerrar la página.
 Página de ayuda o tutorial. Una pequeña explicación de cómo se juega para quien entra por primera vez.
+
